@@ -1,0 +1,60 @@
+<!DOCTYPE CrossStudio_for_ARM_Session_File>
+<session>
+ <Bookmarks/>
+ <Breakpoints/>
+ <ExecutionCountWindow/>
+ <Memory1>
+  <MemoryWindow autoEvaluate="0" addressText="0x200002d0" numColumns="8" sizeText="120" dataSize="1" radix="16" addressSpace="" />
+ </Memory1>
+ <Memory2>
+  <MemoryWindow autoEvaluate="0" addressText="" numColumns="8" sizeText="" dataSize="1" radix="16" addressSpace="" />
+ </Memory2>
+ <Memory3>
+  <MemoryWindow autoEvaluate="0" addressText="" numColumns="8" sizeText="" dataSize="1" radix="16" addressSpace="" />
+ </Memory3>
+ <Memory4>
+  <MemoryWindow autoEvaluate="0" addressText="" numColumns="8" sizeText="" dataSize="1" radix="16" addressSpace="" />
+ </Memory4>
+ <Project>
+  <ProjectSessionItem path="LM3S6965-FreeRTOS-Test" name="unnamed" />
+  <ProjectSessionItem path="LM3S6965-FreeRTOS-Test;LM3S6965-FreeRTOS-Test" name="unnamed" />
+  <ProjectSessionItem path="LM3S6965-FreeRTOS-Test;LM3S6965-FreeRTOS-Test;Source Files" name="unnamed" />
+ </Project>
+ <Register1>
+  <RegisterWindow openNodes="CPU/CFBP;CPU/CFBP/CONTROL[0];CPU/CFBP/CONTROL[1];SYSTEM_CONTROL;SYSTEM_CONTROL/RCC;SYSTEM_CONTROL/RCC/OSCSRC;SYSTEM_CONTROL/RCC/XTAL;SYSTEM_CONTROL/RCC/SYSDIV;SYSTEM_CONTROL/PLLCFG;SYSTEM_CONTROL/RCC2;SYSTEM_CONTROL/RCC2/OSCSRC2" binaryNodes="" unsignedNodes="" visibleGroups="CPU;Interrupt_Type;SCB;SYSTEM_CONTROL" decimalNodes="" octalNodes="" asciiNodes="" />
+ </Register1>
+ <Register2>
+  <RegisterWindow openNodes="MPU" binaryNodes="" unsignedNodes="" visibleGroups="MPU" decimalNodes="" octalNodes="" asciiNodes="" />
+ </Register2>
+ <Register3>
+  <RegisterWindow openNodes="System_Control_Block;System_Control_Block/System_Handlers_8_11_Priority;System_Control_Block/System_Handler_Control_and_State" binaryNodes="" unsignedNodes="" visibleGroups="System_Control_Block" decimalNodes="" octalNodes="" asciiNodes="" />
+ </Register3>
+ <Register4>
+  <RegisterWindow openNodes="" binaryNodes="" unsignedNodes="" visibleGroups="" decimalNodes="" octalNodes="" asciiNodes="" />
+ </Register4>
+ <TargetWindow programAction="" uploadFileType="" programLoadAddress="" programSize="" uploadFileName="" uploadMemoryInterface="" programFileName="" uploadStartAddress="" programFileType="" uploadSize="" programMemoryInterface="" />
+ <TraceWindow>
+  <Trace enabled="Yes" />
+ </TraceWindow>
+ <Watch1>
+  <Watches active="1" update="Never" />
+ </Watch1>
+ <Watch2>
+  <Watches active="0" update="Never" />
+ </Watch2>
+ <Watch3>
+  <Watches active="0" update="Never" />
+ </Watch3>
+ <Watch4>
+  <Watches active="0" update="Never" />
+ </Watch4>
+ <Files>
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="0" debugPath="D:\Eigene Dateien\CrossWorks Projects\LM3S6965-FreeRTOS-Test\main.c" y="10" path="D:\Eigene Dateien\CrossWorks Projects\LM3S6965-FreeRTOS-Test\main.c" left="0" selected="0" name="unnamed" top="0" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="0" debugPath="D:\Eigene Dateien\CrossWorks Projects\LM3S6965-FreeRTOS-Test\LM3S6965_Bitdef.h" y="96" path="D:\Eigene Dateien\CrossWorks Projects\LM3S6965-FreeRTOS-Test\LM3S6965_Bitdef.h" left="0" selected="0" name="unnamed" top="66" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="0" debugPath="D:\Eigene Dateien\CrossWorks Projects\LM3S6965-FreeRTOS-Test\uart_port.c" y="21" path="D:\Eigene Dateien\CrossWorks Projects\LM3S6965-FreeRTOS-Test\uart_port.c" left="0" selected="1" name="unnamed" top="5" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="0" debugPath="D:\Eigene Dateien\CrossWorks Projects\LM3S6965-FreeRTOS-Test\uart_port.h" y="13" path="D:\Eigene Dateien\CrossWorks Projects\LM3S6965-FreeRTOS-Test\uart_port.h" left="0" selected="0" name="unnamed" top="0" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="0" debugPath="D:\Eigene Dateien\CrossWorks Projects\LM3S6965-FreeRTOS-Test\CMSIS\CM3\DeviceSupport\lm3s\lm3s_cmsis.h" y="626" path="D:\Eigene Dateien\CrossWorks Projects\LM3S6965-FreeRTOS-Test\CMSIS\CM3\DeviceSupport\lm3s\lm3s_cmsis.h" left="0" selected="0" name="unnamed" top="603" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="0" debugPath="D:\Eigene Dateien\CrossWorks Projects\LM3S6965-FreeRTOS-Test\system_port.c" y="0" path="D:\Eigene Dateien\CrossWorks Projects\LM3S6965-FreeRTOS-Test\system_port.c" left="0" selected="0" name="unnamed" top="3" />
+ </Files>
+ <ARMCrossStudioWindow activeProject="LM3S6965-FreeRTOS-Test" autoConnectTarget="Segger J-Link" debugSearchFileMap="" fileDialogInitialDirectory="D:\Eigene Dateien\CrossWorks Projects\LM3S6965-FreeRTOS-Test" fileDialogDefaultFilter="*.c" autoConnectCapabilities="388991" debugSearchPath="" buildConfiguration="THUMB Release" />
+</session>

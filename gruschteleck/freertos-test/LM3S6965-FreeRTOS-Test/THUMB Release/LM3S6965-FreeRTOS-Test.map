@@ -1,0 +1,1185 @@
+Archive member included because of file (symbol)
+
+D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__uint32_to_float32.o)
+                              THUMB Release/uart_port.o (__floatunsisf)
+D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__uint32_to_float64.o)
+                              THUMB Release/system_port.o (__floatunsidf)
+D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_uint32.o)
+                              THUMB Release/system_port.o (__fixunsdfsi)
+D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float32_to_float64.o)
+                              THUMB Release/uart_port.o (__extendsfdf2)
+D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_float32.o)
+                              THUMB Release/uart_port.o (__truncdfsf2)
+D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_add.o)
+                              THUMB Release/system_port.o (__adddf3)
+D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_mul.o)
+                              THUMB Release/uart_port.o (__muldf3)
+D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(pow.o)
+                              THUMB Release/system_port.o (pow)
+D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__int32_to_float32.o)
+                              D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__uint32_to_float32.o) (__int32_to_float32_common)
+D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__int32_to_float64.o)
+                              D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(pow.o) (__floatsidf)
+D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_int32.o)
+                              D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(pow.o) (__fixdfsi)
+D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_div.o)
+                              D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(pow.o) (__divdf3)
+D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_cmp.o)
+                              D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(pow.o) (__eqdf2)
+D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(fabs.o)
+                              D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(pow.o) (fabs)
+D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_infinity.o)
+                              D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(pow.o) (__float64_infinity)
+D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(exp.o)
+                              D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(pow.o) (exp)
+D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(ldexp.o)
+                              D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(exp.o) (ldexp)
+D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(log.o)
+                              D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(pow.o) (log)
+D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_isnan.o)
+                              D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(log.o) (__float64_isnan)
+D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_nan.o)
+                              D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(log.o) (__float64_nan)
+D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly1_eval.o)
+                              D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(log.o) (__poly1_eval)
+D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly_eval.o)
+                              D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(log.o) (__poly_eval)
+D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(frexp.o)
+                              D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(log.o) (frexp)
+D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(memcpy.o)
+                              THUMB Release/queue.o (memcpy)
+D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(memset.o)
+                              THUMB Release/tasks.o (memset)
+D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strcat.o)
+                              THUMB Release/tasks.o (strcat)
+D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strncpy.o)
+                              THUMB Release/tasks.o (strncpy)
+D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(sprintf.o)
+                              THUMB Release/tasks.o (sprintf)
+D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o)
+                              D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(sprintf.o) (__vfprintf)
+D:/CrossWorks/ARM/lib/libc_user_libc_v7m_t_le.a(user_libc.o)
+                              D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(pow.o) (__errno)
+D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__uint64_to_float64.o)
+                              D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o) (__floatundidf)
+D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_uint64.o)
+                              D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o) (__fixunsdfdi)
+D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_isinf.o)
+                              D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o) (__float64_isinf)
+D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__int64_to_float64.o)
+                              D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__uint64_to_float64.o) (__int64_to_float64_common)
+D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__int64_umod.o)
+                              D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o) (__umoddi3)
+D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__int64_udivmod.o)
+                              D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o) (__udivdi3)
+D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strlen.o)
+                              D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o) (strlen)
+D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(abs.o)
+                              D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o) (abs)
+D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__pow10.o)
+                              D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o) (__pow10)
+D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__hex_lc_uc.o)
+                              D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o) (__hex_uc)
+
+Allocating common symbols
+Common symbol       size              file
+
+__format_extender   0x4               D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o)
+xQueueRegistry      0x50              THUMB Release/queue.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+UNPLACED_SECTIONS 0xffffffff         0x00000000         xw
+CM3_System_Control_Space 0xe000e000         0x00001000         xw
+Peripherals      0x40020000         0x00100000         xw
+FiRM_Peripherals 0x40000000         0x00010000         xw
+SRAM             0x20000000         0x00010000         xw
+FLASH            0x00000000         0x00040000         xr
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0xe000e000                __CM3_System_Control_Space_segment_start__ = 0xe000e000
+                0xe000f000                __CM3_System_Control_Space_segment_end__ = 0xe000f000
+                0x40020000                __Peripherals_segment_start__ = 0x40020000
+                0x40120000                __Peripherals_segment_end__ = 0x40120000
+                0x40000000                __FiRM_Peripherals_segment_start__ = 0x40000000
+                0x40010000                __FiRM_Peripherals_segment_end__ = 0x40010000
+                0x20000000                __SRAM_segment_start__ = 0x20000000
+                0x20010000                __SRAM_segment_end__ = 0x20010000
+                0x00000000                __FLASH_segment_start__ = 0x0
+                0x00040000                __FLASH_segment_end__ = 0x40000
+                0x00000080                __STACKSIZE__ = 0x80
+                0x00000000                __STACKSIZE_PROCESS__ = 0x0
+                0x00000000                __STACKSIZE_IRQ__ = 0x0
+                0x00000000                __STACKSIZE_FIQ__ = 0x0
+                0x00000000                __STACKSIZE_SVC__ = 0x0
+                0x00000000                __STACKSIZE_ABT__ = 0x0
+                0x00000000                __STACKSIZE_UND__ = 0x0
+                0x00000080                __HEAPSIZE__ = 0x80
+                0x20000000                __vectors_ram_load_start__ = (__SRAM_segment_start__ ALIGN 0x100)
+
+.vectors_ram    0x20000000        0x0
+                0x20000000                __vectors_ram_start__ = .
+ *(.vectors_ram)
+                0x20000000                __vectors_ram_end__ = (__vectors_ram_start__ + SIZEOF (.vectors_ram))
+                0x00000001                . = ASSERT (((__vectors_ram_end__ >= __SRAM_segment_start__) && (__vectors_ram_end__ <= (__SRAM_segment_start__ + 0x10000))), error: .vectors_ram is too large to fit in SRAM memory segment)
+                0x00000000                __vectors_load_start__ = (__FLASH_segment_start__ ALIGN 0x100)
+
+.vectors        0x00000000      0x100
+                0x00000000                __vectors_start__ = .
+ *(.vectors .vectors.*)
+ .vectors       0x00000000      0x100 THUMB Release/LM3S_Startup.o
+                0x00000000                _vectors
+                0x00000100                __vectors_end__ = (__vectors_start__ + SIZEOF (.vectors))
+                0x00000001                . = ASSERT (((__vectors_end__ >= __FLASH_segment_start__) && (__vectors_end__ <= (__FLASH_segment_start__ + 0x40000))), error: .vectors is too large to fit in FLASH memory segment)
+                0x00000100                __init_load_start__ = (__vectors_end__ ALIGN 0x4)
+
+.init           0x00000100      0x170
+                0x00000100                __init_start__ = .
+ *(.init .init.*)
+ .init          0x00000100       0x6e THUMB Release/LM3S_Startup.o
+                0x00000100                reset_handler
+                0x00000102                Nmi_ISR
+                0x00000104                Fault_ISR
+                0x00000106                MPU_Fault_ISR
+                0x00000108                SVCall_ISR
+                0x0000010a                SysTick_ISR
+                0x0000010c                PendSV_ISR
+                0x0000010e                GPIO_Port_A_ISR
+                0x00000110                GPIO_Port_B_ISR
+                0x00000112                GPIO_Port_C_ISR
+                0x00000114                GPIO_Port_D_ISR
+                0x00000116                GPIO_Port_E_ISR
+                0x00000118                UART0_ISR
+                0x0000011a                UART1_ISR
+                0x0000011c                SSI_ISR
+                0x0000011e                I2C_ISR
+                0x00000120                PWM_Fault_ISR
+                0x00000122                PWM_Generator_0_ISR
+                0x00000124                PWM_Generator_1_ISR
+                0x00000126                PWM_Generator_2_ISR
+                0x00000128                QEI_ISR
+                0x0000012a                ADC_Sequence_0_ISR
+                0x0000012c                ADC_Sequence_1_ISR
+                0x0000012e                ADC_Sequence_2_ISR
+                0x00000130                ADC_Sequence_3_ISR
+                0x00000132                Watchdog_Timer_ISR
+                0x00000134                Timer0A_ISR
+                0x00000136                Timer0B_ISR
+                0x00000138                Timer1A_ISR
+                0x0000013a                Timer1B_ISR
+                0x0000013c                Timer2A_ISR
+                0x0000013e                Timer2B_ISR
+                0x00000140                Analog_Comparator_0_ISR
+                0x00000142                Analog_Comparator_1_ISR
+                0x00000144                Analog_Comparator_2_ISR
+                0x00000146                System_Control_ISR
+                0x00000148                FLASH_Control_ISR
+                0x0000014a                GPIO_Port_F_ISR
+                0x0000014c                GPIO_Port_G_ISR
+                0x0000014e                GPIO_Port_H_ISR
+                0x00000150                UART2_ISR
+                0x00000152                SSI1_ISR
+                0x00000154                Timer3A_ISR
+                0x00000156                Timer3B_ISR
+                0x00000158                I2C1_ISR
+                0x0000015a                QEI1_ISR
+                0x0000015c                CAN0_ISR
+                0x0000015e                CAN1_ISR
+                0x00000160                CAN2_ISR
+                0x00000162                ETHERNET_ISR
+                0x00000164                HIBERNATE_ISR
+                0x00000166                USB0_ISR
+                0x00000168                PWM_Generator_3_ISR
+                0x0000016a                uDMA_Software_Transfer_ISR
+                0x0000016c                uDMA_Error_ISR
+ *fill*         0x0000016e        0x2 00
+ .init          0x00000170      0x100 THUMB Release/thumb_crt0.o
+                0x00000170                _start
+                0x00000270                __init_end__ = (__init_start__ + SIZEOF (.init))
+                0x00000001                . = ASSERT (((__init_end__ >= __FLASH_segment_start__) && (__init_end__ <= (__FLASH_segment_start__ + 0x40000))), error: .init is too large to fit in FLASH memory segment)
+                0x00000270                __text_load_start__ = (__init_end__ ALIGN 0x4)
+
+.text           0x00000270     0x3d50
+                0x00000270                __text_start__ = .
+ *(.text .text.* .glue_7t .glue_7 .gnu.linkonce.t.* .gcc_except_table)
+ .glue_7        0x00000000        0x0 linker stubs
+ .glue_7t       0x00000000        0x0 linker stubs
+ .text          0x00000270       0x48 THUMB Release/main.o
+                0x00000270                main
+ .text          0x000002b8       0x74 THUMB Release/test.o
+                0x000002b8                vStartTestTask
+                0x00000304                vTaskCode
+ .text          0x0000032c      0x208 THUMB Release/system_port.o
+                0x0000032c                SystemInit
+                0x00000330                getOscClk
+                0x00000368                SystemUpdateClkVars
+                0x000004bc                SystemClockInit
+ .text          0x00000534        0xc THUMB Release/debug.o
+                0x00000534                debug_printf
+ .text          0x00000540       0xac THUMB Release/uart_port.o
+                0x00000540                UARTPort_Init
+ .text          0x000005ec        0x0 THUMB Release/LM3S_Startup.o
+ .text          0x000005ec        0x0 THUMB Release/thumb_crt0.o
+ .text          0x000005ec       0xa4 THUMB Release/list.o
+                0x000005ec                vListInitialise
+                0x00000604                vListInitialiseItem
+                0x0000060c                vListInsertEnd
+                0x0000062c                vListInsert
+                0x00000668                vListRemove
+ .text          0x00000690      0x5b4 THUMB Release/queue.o
+                0x00000690                uxQueueMessagesWaitingFromISR
+                0x00000694                xQueueIsQueueEmptyFromISR
+                0x000006a0                xQueueIsQueueFullFromISR
+                0x000006b0                vQueueAddToRegistry
+                0x000006ec                vQueueDelete
+                0x00000740                uxQueueMessagesWaiting
+                0x0000077c                xQueueReceiveFromISR
+                0x00000850                xQueueGenericReceive
+                0x00000970                xQueueTakeMutexRecursive
+                0x00000a10                xQueueGenericSendFromISR
+                0x00000a68                xQueueGenericSend
+                0x00000b54                xQueueGiveMutexRecursive
+                0x00000b8c                xQueueCreateMutex
+                0x00000bd8                xQueueCreate
+ .text          0x00000c44      0xebc THUMB Release/tasks.o
+                0x00000c44                xTaskIsTaskSuspended
+                0x00000c70                vTaskSuspendAll
+                0x00000c84                xTaskGetTickCountFromISR
+                0x00000c90                uxTaskGetNumberOfTasks
+                0x00000c9c                vTaskSwitchContext
+                0x00000dc0                vTaskSetTimeOutState
+                0x00000dd4                vTaskMissedYield
+                0x00000e0c                uxTaskGetStackHighWaterMark
+                0x00000e24                xTaskGetCurrentTaskHandle
+                0x00000e34                vTaskPriorityDisinherit
+                0x00000e84                vTaskPriorityInherit
+                0x00000f18                xTaskRemoveFromEventList
+                0x00000fa0                vTaskIncrementTick
+                0x0000105c                xTaskResumeFromISR
+                0x000010dc                xTaskCheckForTimeOut
+                0x00001154                ulTaskEndTrace
+                0x0000117c                vTaskStartTrace
+                0x000011b0                xTaskGetTickCount
+                0x000011c8                uxTaskPriorityGet
+                0x000011e8                vTaskPlaceOnEventList
+                0x000012f8                xTaskResumeAll
+                0x000013f4                vTaskList
+                0x000014d8                vTaskResume
+                0x00001554                vTaskSuspend
+                0x000015e8                vTaskPrioritySet
+                0x0000169c                vTaskDelay
+                0x00001700                vTaskDelayUntil
+                0x000017a8                vTaskDelete
+                0x00001828                vTaskEndScheduler
+                0x000018b0                xTaskGenericCreate
+                0x00001aac                vTaskStartScheduler
+ .text          0x00001b00      0x130 THUMB Release/heap_2.o
+                0x00001b00                xPortGetFreeHeapSize
+                0x00001b0c                vPortInitialiseBlocks
+                0x00001b10                vPortFree
+                0x00001b50                pvPortMalloc
+ .text          0x00001c30      0x150 THUMB Release/port.o
+                0x00001c30                pxPortInitialiseStack
+                0x00001c54                vPortSVCHandler
+                0x00001c74                vPortStartFirstTask
+                0x00001c80                vPortEndScheduler
+                0x00001c84                vPortYieldFromISR
+                0x00001c94                vPortEnterCritical
+                0x00001cb0                vPortExitCritical
+                0x00001ccc                xPortPendSVHandler
+                0x00001d08                xPortStartScheduler
+                0x00001d54                xPortSysTickHandler
+ .text          0x00001d80        0x0 THUMB Release/core_cm3.o
+ .text          0x00001d80        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__uint32_to_float32.o)
+ .text.libc     0x00001d80       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__uint32_to_float32.o)
+                0x00001d80                __floatunsisf
+                0x00001d80                __uint32_to_float32
+ .text          0x00001d90        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__uint32_to_float64.o)
+ .text.libc     0x00001d90       0x24 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__uint32_to_float64.o)
+                0x00001d90                __floatunsidf
+                0x00001d90                __uint32_to_float64
+ .text          0x00001db4        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_uint32.o)
+ .text.libc     0x00001db4       0x2c D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_uint32.o)
+                0x00001db4                __float64_to_uint32
+                0x00001db4                __fixunsdfsi
+ .text          0x00001de0        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float32_to_float64.o)
+ .text.libc     0x00001de0       0x38 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float32_to_float64.o)
+                0x00001de0                __float32_to_float64
+                0x00001de0                __extendsfdf2
+ .text          0x00001e18        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_float32.o)
+ .text.libc     0x00001e18       0x70 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_float32.o)
+                0x00001e18                __float64_to_float32
+                0x00001e18                __truncdfsf2
+ .text          0x00001e88        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_add.o)
+ .text.libc     0x00001e88      0x294 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_add.o)
+                0x00001e88                __aeabi_frsub
+                0x00001e90                __aeabi_fsub
+                0x00001e90                __float64_sub
+                0x00001e90                __subdf3
+                0x00001e94                __float64_add
+                0x00001e94                __adddf3
+                0x00001e94                __aeabi_fadd
+ .text          0x0000211c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_mul.o)
+ .text.libc     0x0000211c      0x170 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_mul.o)
+                0x0000211c                __muldf3
+                0x0000211c                __float64_mul
+ .text          0x0000228c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(pow.o)
+ .text.libc     0x0000228c      0x118 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(pow.o)
+                0x0000228c                pow
+ .text          0x000023a4        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__int32_to_float32.o)
+ .text.libc     0x000023a4       0x30 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__int32_to_float32.o)
+                0x000023a4                __floatsisf
+                0x000023a4                __int32_to_float32
+                0x000023b4                __int32_to_float32_common
+ .text          0x000023d4        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__int32_to_float64.o)
+ .text.libc     0x000023d4       0x30 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__int32_to_float64.o)
+                0x000023d4                __int32_to_float64
+                0x000023d4                __floatsidf
+ .text          0x00002404        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_int32.o)
+ .text.libc     0x00002404       0x50 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_int32.o)
+                0x00002404                __float64_to_int32
+                0x00002404                __fixdfsi
+ .text          0x00002454        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_div.o)
+ .text.libc     0x00002454      0x214 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_div.o)
+                0x00002454                __divdf3
+                0x00002454                __float64_div
+                0x00002454                __aeabi_ddiv
+ .text          0x00002668        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_cmp.o)
+ .text.libc     0x00002668       0x64 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_cmp.o)
+                0x00002668                __eqdf2
+                0x00002668                __gtdf2
+                0x00002668                __ltdf2
+                0x00002668                __ledf2
+                0x00002668                __nedf2
+                0x00002668                __gedf2
+                0x00002668                __cmpdf2
+ .text          0x000026cc        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(fabs.o)
+ .text.libc     0x000026cc        0x8 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(fabs.o)
+                0x000026cc                fabs
+ .text          0x000026d4        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_infinity.o)
+ .text.libc     0x000026d4        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_infinity.o)
+ .text          0x000026d4        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(exp.o)
+ .text.libc     0x000026d4      0x1c4 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(exp.o)
+                0x000026d4                exp
+ .text          0x00002898        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(ldexp.o)
+ .text.libc     0x00002898       0x50 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(ldexp.o)
+                0x00002898                ldexp
+ .text          0x000028e8        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(log.o)
+ .text.libc     0x000028e8      0x1c4 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(log.o)
+                0x000028e8                log
+ .text          0x00002aac        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_isnan.o)
+ .text.libc     0x00002aac       0x14 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_isnan.o)
+                0x00002aac                __float64_isnan
+ .text          0x00002ac0        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_nan.o)
+ .text.libc     0x00002ac0        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_nan.o)
+ .text          0x00002ac0        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly1_eval.o)
+ .text.libc     0x00002ac0       0x50 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly1_eval.o)
+                0x00002ac0                __poly1_eval
+ .text          0x00002b10        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly_eval.o)
+ .text.libc     0x00002b10       0x38 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly_eval.o)
+                0x00002b10                __poly_eval
+ .text          0x00002b48        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(frexp.o)
+ .text.libc     0x00002b48       0x3c D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(frexp.o)
+                0x00002b48                frexp
+ .text          0x00002b84        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(memcpy.o)
+ .text.libc     0x00002b84       0x3c D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(memcpy.o)
+                0x00002b84                memcpy
+ .text          0x00002bc0        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(memset.o)
+ .text.libc     0x00002bc0       0x60 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(memset.o)
+                0x00002bc0                memset
+ .text          0x00002c20        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strcat.o)
+ .text.libc     0x00002c20       0x28 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strcat.o)
+                0x00002c20                strcat
+ .text          0x00002c48        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strncpy.o)
+ .text.libc     0x00002c48       0x4c D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strncpy.o)
+                0x00002c48                strncpy
+ .text          0x00002c94        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(sprintf.o)
+ .text.libc     0x00002c94       0x2c D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(sprintf.o)
+                0x00002c94                sprintf
+ .text          0x00002cc0        0x0 D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o)
+ .text.libc     0x00002cc0     0x1074 D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o)
+                0x00002cc0                __putc
+                0x00002cf8                __print_padding
+                0x00002d14                __pre_padding
+                0x00002d30                __vfprintf
+ .text          0x00003d34        0x0 D:/CrossWorks/ARM/lib/libc_user_libc_v7m_t_le.a(user_libc.o)
+ .text.libc     0x00003d34       0x2c D:/CrossWorks/ARM/lib/libc_user_libc_v7m_t_le.a(user_libc.o)
+                0x00003d34                __errno
+                0x00003d40                __heap_lock
+                0x00003d44                __heap_unlock
+                0x00003d48                __printf_lock
+                0x00003d4c                __printf_unlock
+                0x00003d50                __scanf_lock
+                0x00003d54                __scanf_unlock
+                0x00003d58                __debug_io_lock
+                0x00003d5c                __debug_io_unlock
+ .text          0x00003d60        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__uint64_to_float64.o)
+ .text.libc     0x00003d60       0x14 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__uint64_to_float64.o)
+                0x00003d60                __floatundidf
+                0x00003d60                __uint64_to_float64
+ .text          0x00003d74        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_uint64.o)
+ .text.libc     0x00003d74       0x4c D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_uint64.o)
+                0x00003d74                __float64_to_uint64
+                0x00003d74                __fixunsdfdi
+ .text          0x00003dc0        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_isinf.o)
+ .text.libc     0x00003dc0       0x14 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_isinf.o)
+                0x00003dc0                __float64_isinf
+ .text          0x00003dd4        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__int64_to_float64.o)
+ .text.libc     0x00003dd4       0xa0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__int64_to_float64.o)
+                0x00003dd4                __int64_to_float64
+                0x00003dd4                __floatdidf
+                0x00003df6                __int64_to_float64_common
+ .text          0x00003e74        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__int64_umod.o)
+ .text.libc     0x00003e74        0xc D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__int64_umod.o)
+                0x00003e74                __umoddi3
+                0x00003e74                __int64_umod
+ .text          0x00003e80        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__int64_udivmod.o)
+ .text.libc     0x00003e80       0x60 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__int64_udivmod.o)
+                0x00003e80                __int64_udiv
+                0x00003e80                __udivdi3
+                0x00003e80                __int64_udivmod
+ .text          0x00003ee0        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strlen.o)
+ .text.libc     0x00003ee0       0x60 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strlen.o)
+                0x00003ee0                strlen
+ .text          0x00003f40        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(abs.o)
+ .text.libc     0x00003f40        0xc D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(abs.o)
+                0x00003f40                abs
+ .text          0x00003f4c        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__pow10.o)
+ .text.libc     0x00003f4c       0x74 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__pow10.o)
+                0x00003f4c                __pow10
+ .text          0x00003fc0        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__hex_lc_uc.o)
+ .text.libc     0x00003fc0        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__hex_lc_uc.o)
+                0x00003fc0                __text_end__ = (__text_start__ + SIZEOF (.text))
+
+.vfp11_veneer   0x00000000        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x00000000        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+                0x00000001                . = ASSERT (((__text_end__ >= __FLASH_segment_start__) && (__text_end__ <= (__FLASH_segment_start__ + 0x40000))), error: .text is too large to fit in FLASH memory segment)
+                0x00003fc0                __dtors_load_start__ = (__text_end__ ALIGN 0x4)
+
+.dtors          0x00003fc0        0x0
+                0x00003fc0                __dtors_start__ = .
+ *(SORT(.dtors.*))
+ *(.dtors)
+                0x00003fc0                __dtors_end__ = (__dtors_start__ + SIZEOF (.dtors))
+                0x00000001                . = ASSERT (((__dtors_end__ >= __FLASH_segment_start__) && (__dtors_end__ <= (__FLASH_segment_start__ + 0x40000))), error: .dtors is too large to fit in FLASH memory segment)
+                0x00003fc0                __ctors_load_start__ = (__dtors_end__ ALIGN 0x4)
+
+.ctors          0x00003fc0        0x0
+                0x00003fc0                __ctors_start__ = .
+ *(SORT(.ctors.*))
+ *(.ctors)
+                0x00003fc0                __ctors_end__ = (__ctors_start__ + SIZEOF (.ctors))
+                0x00000001                . = ASSERT (((__ctors_end__ >= __FLASH_segment_start__) && (__ctors_end__ <= (__FLASH_segment_start__ + 0x40000))), error: .ctors is too large to fit in FLASH memory segment)
+                0x00003fc0                __rodata_load_start__ = (__ctors_end__ ALIGN 0x4)
+
+.rodata         0x00003fc0      0x278
+                0x00003fc0                __rodata_start__ = .
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.str1.4
+                0x00003fc0       0x6f THUMB Release/main.o
+                                 0x70 (size before relaxing)
+ *fill*         0x0000402f        0x1 00
+ .rodata.str1.4
+                0x00004030       0x3a THUMB Release/test.o
+                                 0x3c (size before relaxing)
+ *fill*         0x0000406a        0x2 00
+ .rodata        0x0000406c       0x40 THUMB Release/system_port.o
+ .rodata.str1.4
+                0x000040ac       0x1c THUMB Release/uart_port.o
+ .rodata.str1.4
+                0x000040c8       0x1d THUMB Release/tasks.o
+                                 0x20 (size before relaxing)
+ *fill*         0x000040e5        0x3 00
+ .rodata        0x000040e8        0x4 THUMB Release/port.o
+                0x000040e8                ulKernelPriority
+ .rodata.libc   0x000040ec        0x8 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_infinity.o)
+                0x000040ec                __float64_infinity
+ .rodata.libc   0x000040f4       0x28 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(log.o)
+ .rodata.libc   0x0000411c        0x8 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_nan.o)
+                0x0000411c                __float64_nan
+ .rodata.libc   0x00004124       0x98 D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o)
+ .rodata.libc.str1.4
+                0x000041bc       0x14 D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o)
+ .rodata.libc   0x000041d0       0x48 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__pow10.o)
+ .rodata.libc   0x00004218       0x20 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__hex_lc_uc.o)
+                0x00004218                __hex_uc
+                0x00004228                __hex_lc
+                0x00004238                __rodata_end__ = (__rodata_start__ + SIZEOF (.rodata))
+                0x00000001                . = ASSERT (((__rodata_end__ >= __FLASH_segment_start__) && (__rodata_end__ <= (__FLASH_segment_start__ + 0x40000))), error: .rodata is too large to fit in FLASH memory segment)
+                0x00004238                __data_load_start__ = (__rodata_end__ ALIGN 0x4)
+
+.data           0x20000000       0x1c load address 0x00004238
+                0x20000000                __data_start__ = .
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x20000000        0x0 THUMB Release/main.o
+ .data          0x20000000        0x0 THUMB Release/test.o
+ .data          0x20000000       0x10 THUMB Release/system_port.o
+                0x20000000                SysP_SystemFrequency
+                0x20000004                SysP_SystemFrequency_PwmClk
+                0x20000008                SysP_SystemFrequency_AdcClk
+                0x2000000c                SysP_SystemFrequency_CanClk
+ .data          0x20000010        0x0 THUMB Release/debug.o
+ .data          0x20000010        0x0 THUMB Release/uart_port.o
+ .data          0x20000010        0x0 THUMB Release/LM3S_Startup.o
+ .data          0x20000010        0x0 THUMB Release/thumb_crt0.o
+ .data          0x20000010        0x0 THUMB Release/list.o
+ .data          0x20000010        0x0 THUMB Release/queue.o
+ .data          0x20000010        0x4 THUMB Release/tasks.o
+ .data          0x20000014        0x4 THUMB Release/heap_2.o
+ .data          0x20000018        0x4 THUMB Release/port.o
+ .data          0x2000001c        0x0 THUMB Release/core_cm3.o
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__uint32_to_float32.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__uint32_to_float64.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_uint32.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float32_to_float64.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_float32.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_add.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_mul.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(pow.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__int32_to_float32.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__int32_to_float64.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_int32.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_div.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_cmp.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(fabs.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_infinity.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(exp.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(ldexp.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(log.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_isnan.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_nan.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly1_eval.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly_eval.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(frexp.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(memcpy.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(memset.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strcat.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strncpy.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(sprintf.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libc_user_libc_v7m_t_le.a(user_libc.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__uint64_to_float64.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_uint64.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_isinf.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__int64_to_float64.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__int64_umod.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__int64_udivmod.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strlen.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(abs.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__pow10.o)
+ .data          0x2000001c        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__hex_lc_uc.o)
+                0x2000001c                __data_end__ = (__data_start__ + SIZEOF (.data))
+                0x00004254                __data_load_end__ = (__data_load_start__ + SIZEOF (.data))
+                0x00000001                . = ASSERT ((((__data_load_start__ + SIZEOF (.data)) >= __FLASH_segment_start__) && ((__data_load_start__ + SIZEOF (.data)) <= (__FLASH_segment_start__ + 0x40000))), error: .data is too large to fit in FLASH memory segment)
+
+.data_run       0x20000000       0x1c
+                0x20000000                __data_run_start__ = .
+                0x2000001c                . = ((__data_run_start__ + SIZEOF (.data)) MAX .)
+ *fill*         0x20000000       0x1c 00
+                0x2000001c                __data_run_end__ = (__data_run_start__ + SIZEOF (.data_run))
+                0x00000001                . = ASSERT (((__data_run_end__ >= __SRAM_segment_start__) && (__data_run_end__ <= (__SRAM_segment_start__ + 0x10000))), error: .data_run is too large to fit in SRAM memory segment)
+                0x2000001c                __bss_load_start__ = (__data_run_end__ ALIGN 0x4)
+
+.bss            0x2000001c     0x5f74
+                0x2000001c                __bss_start__ = .
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x2000001c        0x0 THUMB Release/main.o
+ .bss           0x2000001c        0x1 THUMB Release/test.o
+ .bss           0x2000001d        0x0 THUMB Release/system_port.o
+ .bss           0x2000001d        0x0 THUMB Release/debug.o
+ .bss           0x2000001d        0x0 THUMB Release/uart_port.o
+ .bss           0x2000001d        0x0 THUMB Release/LM3S_Startup.o
+ .bss           0x2000001d        0x0 THUMB Release/thumb_crt0.o
+ .bss           0x2000001d        0x0 THUMB Release/list.o
+ .bss           0x2000001d        0x0 THUMB Release/queue.o
+ *fill*         0x2000001d        0x3 00
+ .bss           0x20000020      0x144 THUMB Release/tasks.o
+                0x200000c0                pxCurrentTCB
+ .bss           0x20000164     0x5dd4 THUMB Release/heap_2.o
+ .bss           0x20005f38        0x0 THUMB Release/port.o
+ .bss           0x20005f38        0x0 THUMB Release/core_cm3.o
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__uint32_to_float32.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__uint32_to_float64.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_uint32.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float32_to_float64.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_float32.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_add.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_mul.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(pow.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__int32_to_float32.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__int32_to_float64.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_int32.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_div.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_cmp.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(fabs.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_infinity.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(exp.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(ldexp.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(log.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_isnan.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_nan.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly1_eval.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly_eval.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(frexp.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(memcpy.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(memset.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strcat.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strncpy.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(sprintf.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o)
+ .bss           0x20005f38        0x0 D:/CrossWorks/ARM/lib/libc_user_libc_v7m_t_le.a(user_libc.o)
+ .bss.libc      0x20005f38        0x4 D:/CrossWorks/ARM/lib/libc_user_libc_v7m_t_le.a(user_libc.o)
+ .bss           0x20005f3c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__uint64_to_float64.o)
+ .bss           0x20005f3c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_uint64.o)
+ .bss           0x20005f3c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_isinf.o)
+ .bss           0x20005f3c        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__int64_to_float64.o)
+ .bss           0x20005f3c        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__int64_umod.o)
+ .bss           0x20005f3c        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__int64_udivmod.o)
+ .bss           0x20005f3c        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strlen.o)
+ .bss           0x20005f3c        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(abs.o)
+ .bss           0x20005f3c        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__pow10.o)
+ .bss           0x20005f3c        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__hex_lc_uc.o)
+ *(COMMON)
+ COMMON         0x20005f3c       0x50 THUMB Release/queue.o
+                0x20005f3c                xQueueRegistry
+ COMMON         0x20005f8c        0x4 D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o)
+                0x20005f8c                __format_extender
+                0x20005f90                __bss_end__ = (__bss_start__ + SIZEOF (.bss))
+                0x00000001                . = ASSERT (((__bss_end__ >= __SRAM_segment_start__) && (__bss_end__ <= (__SRAM_segment_start__ + 0x10000))), error: .bss is too large to fit in SRAM memory segment)
+                0x20005f90                __non_init_load_start__ = (__bss_end__ ALIGN 0x4)
+
+.non_init       0x20005f90        0x0
+                0x20005f90                __non_init_start__ = .
+ *(.non_init .non_init.*)
+                0x20005f90                __non_init_end__ = (__non_init_start__ + SIZEOF (.non_init))
+                0x00000001                . = ASSERT (((__non_init_end__ >= __SRAM_segment_start__) && (__non_init_end__ <= (__SRAM_segment_start__ + 0x10000))), error: .non_init is too large to fit in SRAM memory segment)
+                0x20005f90                __heap_load_start__ = (__non_init_end__ ALIGN 0x4)
+
+.heap           0x20005f90       0x80
+                0x20005f90                __heap_start__ = .
+ *(.heap)
+ .heap          0x20005f90        0x0 THUMB Release/thumb_crt0.o
+                0x20006010                . = (((__heap_start__ + __HEAPSIZE__) MAX .) ALIGN 0x4)
+ *fill*         0x20005f90       0x80 00
+                0x20006010                __heap_end__ = (__heap_start__ + SIZEOF (.heap))
+                0x00000001                . = ASSERT (((__heap_end__ >= __SRAM_segment_start__) && (__heap_end__ <= (__SRAM_segment_start__ + 0x10000))), error: .heap is too large to fit in SRAM memory segment)
+                0x20006010                __stack_load_start__ = (__heap_end__ ALIGN 0x4)
+
+.stack          0x20006010       0x80
+                0x20006010                __stack_start__ = .
+ *(.stack)
+ .stack         0x20006010        0x0 THUMB Release/thumb_crt0.o
+                0x20006090                . = (((__stack_start__ + __STACKSIZE__) MAX .) ALIGN 0x4)
+ *fill*         0x20006010       0x80 00
+                0x20006090                __stack_end__ = (__stack_start__ + SIZEOF (.stack))
+                0x00000001                . = ASSERT (((__stack_end__ >= __SRAM_segment_start__) && (__stack_end__ <= (__SRAM_segment_start__ + 0x10000))), error: .stack is too large to fit in SRAM memory segment)
+                0x20006090                __stack_process_load_start__ = (__stack_end__ ALIGN 0x4)
+
+.stack_process  0x20006090        0x0
+                0x20006090                __stack_process_start__ = .
+ *(.stack_process)
+ .stack_process
+                0x20006090        0x0 THUMB Release/thumb_crt0.o
+                0x20006094                . = (((__stack_process_start__ + __STACKSIZE_PROCESS__) MAX .) ALIGN 0x4)
+                0x20006090                __stack_process_end__ = (__stack_process_start__ + SIZEOF (.stack_process))
+                0x00000001                . = ASSERT (((__stack_process_end__ >= __SRAM_segment_start__) && (__stack_process_end__ <= (__SRAM_segment_start__ + 0x10000))), error: .stack_process is too large to fit in SRAM memory segment)
+                0x00004254                __fast_load_start__ = ((__data_load_start__ + SIZEOF (.data)) ALIGN 0x4)
+
+.fast           0x20006090        0x0 load address 0x00004254
+                0x20006090                __fast_start__ = .
+ *(.fast .fast.*)
+                0x20006090                __fast_end__ = (__fast_start__ + SIZEOF (.fast))
+                0x00004254                __fast_load_end__ = (__fast_load_start__ + SIZEOF (.fast))
+                0x00004254                __FLASH_segment_used_end__ = (((__data_load_start__ + SIZEOF (.data)) ALIGN 0x4) + SIZEOF (.fast))
+                0x00000001                . = ASSERT ((((__fast_load_start__ + SIZEOF (.fast)) >= __FLASH_segment_start__) && ((__fast_load_start__ + SIZEOF (.fast)) <= (__FLASH_segment_start__ + 0x40000))), error: .fast is too large to fit in FLASH memory segment)
+
+.fast_run       0x20006090        0x0
+                0x20006090                __fast_run_start__ = .
+                0x20006090                . = ((__fast_run_start__ + SIZEOF (.fast)) MAX .)
+                0x20006090                __fast_run_end__ = (__fast_run_start__ + SIZEOF (.fast_run))
+                0x20006090                __SRAM_segment_used_end__ = ((__stack_process_end__ ALIGN 0x4) + SIZEOF (.fast_run))
+                0x00000001                . = ASSERT (((__fast_run_end__ >= __SRAM_segment_start__) && (__fast_run_end__ <= (__SRAM_segment_start__ + 0x10000))), error: .fast_run is too large to fit in SRAM memory segment)
+START GROUP
+LOAD THUMB Release/main.o
+LOAD THUMB Release/test.o
+LOAD THUMB Release/system_port.o
+LOAD THUMB Release/debug.o
+LOAD THUMB Release/uart_port.o
+LOAD THUMB Release/LM3S_Startup.o
+LOAD THUMB Release/thumb_crt0.o
+LOAD THUMB Release/list.o
+LOAD THUMB Release/queue.o
+LOAD THUMB Release/tasks.o
+LOAD THUMB Release/heap_2.o
+LOAD THUMB Release/port.o
+LOAD THUMB Release/core_cm3.o
+LOAD C:/Users/Gizmor/AppData/Local/Rowley Associates Limited/CrossWorks for ARM/packages/targets/LM3S/lib/libcmsis_v7m_t_le.a
+LOAD D:/CrossWorks/ARM/lib/libdebugio_mempoll_v7m_t_le.a
+LOAD D:/CrossWorks/ARM/lib/libm_v7m_t_le.a
+LOAD D:/CrossWorks/ARM/lib/libc_v7m_t_le.a
+LOAD D:/CrossWorks/ARM/lib/libcpp_v7m_t_le.a
+LOAD D:/CrossWorks/ARM/lib/libdebugio_v7m_t_le.a
+LOAD D:/CrossWorks/ARM/lib/libc_targetio_impl_v7m_t_le.a
+LOAD D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a
+LOAD D:/CrossWorks/ARM/lib/lib_vfscanf_long_v7m_t_le.a
+LOAD D:/CrossWorks/ARM/lib/libc_user_libc_v7m_t_le.a
+END GROUP
+OUTPUT(THUMB Release/LM3S6965-FreeRTOS-Test.elf elf32-littlearm)
+
+.debug_abbrev   0x00000000      0x418
+ .debug_abbrev  0x00000000       0x23 THUMB Release/main.o
+ .debug_abbrev  0x00000023       0x23 THUMB Release/test.o
+ .debug_abbrev  0x00000046       0x36 THUMB Release/system_port.o
+ .debug_abbrev  0x0000007c       0x23 THUMB Release/debug.o
+ .debug_abbrev  0x0000009f       0x23 THUMB Release/uart_port.o
+ .debug_abbrev  0x000000c2       0x23 THUMB Release/list.o
+ .debug_abbrev  0x000000e5       0x67 THUMB Release/queue.o
+ .debug_abbrev  0x0000014c       0x65 THUMB Release/tasks.o
+ .debug_abbrev  0x000001b1       0x36 THUMB Release/heap_2.o
+ .debug_abbrev  0x000001e7       0x43 THUMB Release/port.o
+ .debug_abbrev  0x0000022a        0x1 THUMB Release/core_cm3.o
+ .debug_abbrev  0x0000022b       0x23 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(pow.o)
+ .debug_abbrev  0x0000024e        0x1 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_infinity.o)
+ .debug_abbrev  0x0000024f       0x23 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(exp.o)
+ .debug_abbrev  0x00000272       0x23 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(ldexp.o)
+ .debug_abbrev  0x00000295       0x23 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(log.o)
+ .debug_abbrev  0x000002b8        0x1 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_nan.o)
+ .debug_abbrev  0x000002b9       0x23 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly1_eval.o)
+ .debug_abbrev  0x000002dc       0x23 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly_eval.o)
+ .debug_abbrev  0x000002ff       0x23 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(frexp.o)
+ .debug_abbrev  0x00000322       0x23 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strcat.o)
+ .debug_abbrev  0x00000345       0x23 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strncpy.o)
+ .debug_abbrev  0x00000368       0x23 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(sprintf.o)
+ .debug_abbrev  0x0000038b       0x23 D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o)
+ .debug_abbrev  0x000003ae       0x23 D:/CrossWorks/ARM/lib/libc_user_libc_v7m_t_le.a(user_libc.o)
+ .debug_abbrev  0x000003d1       0x23 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(abs.o)
+ .debug_abbrev  0x000003f4       0x23 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__pow10.o)
+ .debug_abbrev  0x00000417        0x1 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__hex_lc_uc.o)
+
+.debug_info     0x00000000      0xb1f
+ .debug_info    0x00000000       0x32 THUMB Release/main.o
+ .debug_info    0x00000032       0x46 THUMB Release/test.o
+ .debug_info    0x00000078       0x6a THUMB Release/system_port.o
+ .debug_info    0x000000e2       0x32 THUMB Release/debug.o
+ .debug_info    0x00000114       0x32 THUMB Release/uart_port.o
+ .debug_info    0x00000146       0x78 THUMB Release/list.o
+ .debug_info    0x000001be      0x192 THUMB Release/queue.o
+ .debug_info    0x00000350      0x300 THUMB Release/tasks.o
+ .debug_info    0x00000650       0x6c THUMB Release/heap_2.o
+ .debug_info    0x000006bc       0xdf THUMB Release/port.o
+ .debug_info    0x0000079b        0x0 THUMB Release/core_cm3.o
+ .debug_info    0x0000079b       0x32 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(pow.o)
+ .debug_info    0x000007cd        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_infinity.o)
+ .debug_info    0x000007cd       0x32 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(exp.o)
+ .debug_info    0x000007ff       0x32 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(ldexp.o)
+ .debug_info    0x00000831       0x32 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(log.o)
+ .debug_info    0x00000863        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_nan.o)
+ .debug_info    0x00000863       0x32 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly1_eval.o)
+ .debug_info    0x00000895       0x32 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly_eval.o)
+ .debug_info    0x000008c7       0x32 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(frexp.o)
+ .debug_info    0x000008f9       0x32 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strcat.o)
+ .debug_info    0x0000092b       0x32 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strncpy.o)
+ .debug_info    0x0000095d       0x32 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(sprintf.o)
+ .debug_info    0x0000098f       0x6e D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o)
+ .debug_info    0x000009fd       0xc0 D:/CrossWorks/ARM/lib/libc_user_libc_v7m_t_le.a(user_libc.o)
+ .debug_info    0x00000abd       0x30 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(abs.o)
+ .debug_info    0x00000aed       0x32 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__pow10.o)
+ .debug_info    0x00000b1f        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__hex_lc_uc.o)
+
+.debug_line     0x00000000      0xaf8
+ .debug_line    0x00000000       0x64 THUMB Release/main.o
+ .debug_line    0x00000064       0x64 THUMB Release/test.o
+ .debug_line    0x000000c8       0x6b THUMB Release/system_port.o
+ .debug_line    0x00000133       0x65 THUMB Release/debug.o
+ .debug_line    0x00000198       0x69 THUMB Release/uart_port.o
+ .debug_line    0x00000201       0x6d THUMB Release/list.o
+ .debug_line    0x0000026e       0x6e THUMB Release/queue.o
+ .debug_line    0x000002dc       0x6e THUMB Release/tasks.o
+ .debug_line    0x0000034a       0x80 THUMB Release/heap_2.o
+ .debug_line    0x000003ca       0x82 THUMB Release/port.o
+ .debug_line    0x0000044c        0x0 THUMB Release/core_cm3.o
+ .debug_line    0x0000044c       0x79 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(pow.o)
+ .debug_line    0x000004c5        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_infinity.o)
+ .debug_line    0x000004c5       0x79 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(exp.o)
+ .debug_line    0x0000053e       0x7b D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(ldexp.o)
+ .debug_line    0x000005b9       0x79 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(log.o)
+ .debug_line    0x00000632        0x0 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_nan.o)
+ .debug_line    0x00000632       0x82 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly1_eval.o)
+ .debug_line    0x000006b4       0x81 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly_eval.o)
+ .debug_line    0x00000735       0x7b D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(frexp.o)
+ .debug_line    0x000007b0       0x77 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strcat.o)
+ .debug_line    0x00000827       0x78 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strncpy.o)
+ .debug_line    0x0000089f       0x78 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(sprintf.o)
+ .debug_line    0x00000917       0x7b D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o)
+ .debug_line    0x00000992       0x7a D:/CrossWorks/ARM/lib/libc_user_libc_v7m_t_le.a(user_libc.o)
+ .debug_line    0x00000a0c       0x74 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(abs.o)
+ .debug_line    0x00000a80       0x78 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__pow10.o)
+ .debug_line    0x00000af8        0x0 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__hex_lc_uc.o)
+
+.debug_frame    0x00000000     0x1030
+ .debug_frame   0x00000000       0x34 THUMB Release/main.o
+ .debug_frame   0x00000034       0x60 THUMB Release/test.o
+ .debug_frame   0x00000094       0x74 THUMB Release/system_port.o
+ .debug_frame   0x00000108       0x34 THUMB Release/debug.o
+ .debug_frame   0x0000013c       0x40 THUMB Release/uart_port.o
+ .debug_frame   0x0000017c       0x60 THUMB Release/list.o
+ .debug_frame   0x000001dc      0x230 THUMB Release/queue.o
+ .debug_frame   0x0000040c      0x428 THUMB Release/tasks.o
+ .debug_frame   0x00000834       0x74 THUMB Release/heap_2.o
+ .debug_frame   0x000008a8       0xcc THUMB Release/port.o
+ .debug_frame   0x00000974       0x20 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__uint32_to_float32.o)
+ .debug_frame   0x00000994       0x20 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__uint32_to_float64.o)
+ .debug_frame   0x000009b4       0x20 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_uint32.o)
+ .debug_frame   0x000009d4       0x20 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float32_to_float64.o)
+ .debug_frame   0x000009f4       0x20 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_float32.o)
+ .debug_frame   0x00000a14       0x20 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_add.o)
+ .debug_frame   0x00000a34       0x20 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_mul.o)
+ .debug_frame   0x00000a54       0x3c D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(pow.o)
+ .debug_frame   0x00000a90       0x20 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__int32_to_float32.o)
+ .debug_frame   0x00000ab0       0x20 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__int32_to_float64.o)
+ .debug_frame   0x00000ad0       0x20 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_int32.o)
+ .debug_frame   0x00000af0       0x20 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_div.o)
+ .debug_frame   0x00000b10       0x20 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_cmp.o)
+ .debug_frame   0x00000b30       0x20 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(fabs.o)
+ .debug_frame   0x00000b50       0x3c D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(exp.o)
+ .debug_frame   0x00000b8c       0x34 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(ldexp.o)
+ .debug_frame   0x00000bc0       0x4c D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(log.o)
+ .debug_frame   0x00000c0c       0x20 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_isnan.o)
+ .debug_frame   0x00000c2c       0x3c D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly1_eval.o)
+ .debug_frame   0x00000c68       0x38 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly_eval.o)
+ .debug_frame   0x00000ca0       0x34 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(frexp.o)
+ .debug_frame   0x00000cd4       0x20 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(memcpy.o)
+ .debug_frame   0x00000cf4       0x20 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(memset.o)
+ .debug_frame   0x00000d14       0x2c D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strcat.o)
+ .debug_frame   0x00000d40       0x2c D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strncpy.o)
+ .debug_frame   0x00000d6c       0x44 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(sprintf.o)
+ .debug_frame   0x00000db0       0xac D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o)
+ .debug_frame   0x00000e5c       0xa0 D:/CrossWorks/ARM/lib/libc_user_libc_v7m_t_le.a(user_libc.o)
+ .debug_frame   0x00000efc       0x20 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__uint64_to_float64.o)
+ .debug_frame   0x00000f1c       0x20 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_uint64.o)
+ .debug_frame   0x00000f3c       0x20 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_isinf.o)
+ .debug_frame   0x00000f5c       0x20 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__int64_to_float64.o)
+ .debug_frame   0x00000f7c       0x20 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__int64_umod.o)
+ .debug_frame   0x00000f9c       0x20 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__int64_udivmod.o)
+ .debug_frame   0x00000fbc       0x20 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strlen.o)
+ .debug_frame   0x00000fdc       0x20 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(abs.o)
+ .debug_frame   0x00000ffc       0x34 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__pow10.o)
+
+.debug_loc      0x00000000      0x851
+ .debug_loc     0x00000000       0x2b THUMB Release/main.o
+ .debug_loc     0x0000002b       0x56 THUMB Release/test.o
+ .debug_loc     0x00000081       0x3e THUMB Release/system_port.o
+ .debug_loc     0x000000bf       0x1f THUMB Release/debug.o
+ .debug_loc     0x000000de       0x2b THUMB Release/uart_port.o
+ .debug_loc     0x00000109      0x1ab THUMB Release/queue.o
+ .debug_loc     0x000002b4      0x31f THUMB Release/tasks.o
+ .debug_loc     0x000005d3       0x3e THUMB Release/heap_2.o
+ .debug_loc     0x00000611       0x3e THUMB Release/port.o
+ .debug_loc     0x0000064f       0x1f D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(pow.o)
+ .debug_loc     0x0000066e       0x1f D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(exp.o)
+ .debug_loc     0x0000068d       0x1f D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(ldexp.o)
+ .debug_loc     0x000006ac       0x2b D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(log.o)
+ .debug_loc     0x000006d7       0x1f D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly1_eval.o)
+ .debug_loc     0x000006f6       0x1f D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly_eval.o)
+ .debug_loc     0x00000715       0x1f D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(frexp.o)
+ .debug_loc     0x00000734       0x1f D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strcat.o)
+ .debug_loc     0x00000753       0x1f D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strncpy.o)
+ .debug_loc     0x00000772       0x37 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(sprintf.o)
+ .debug_loc     0x000007a9       0x89 D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o)
+ .debug_loc     0x00000832       0x1f D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__pow10.o)
+
+.debug_pubnames
+                0x00000000      0x967
+ .debug_pubnames
+                0x00000000       0x1b THUMB Release/main.o
+ .debug_pubnames
+                0x0000001b       0x33 THUMB Release/test.o
+ .debug_pubnames
+                0x0000004e       0x5b THUMB Release/system_port.o
+ .debug_pubnames
+                0x000000a9       0x23 THUMB Release/debug.o
+ .debug_pubnames
+                0x000000cc       0x24 THUMB Release/uart_port.o
+ .debug_pubnames
+                0x000000f0       0x71 THUMB Release/list.o
+ .debug_pubnames
+                0x00000161      0x179 THUMB Release/queue.o
+ .debug_pubnames
+                0x000002da      0x2cf THUMB Release/tasks.o
+ .debug_pubnames
+                0x000005a9       0x64 THUMB Release/heap_2.o
+ .debug_pubnames
+                0x0000060d       0xf8 THUMB Release/port.o
+ .debug_pubnames
+                0x00000705       0x1a D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(pow.o)
+ .debug_pubnames
+                0x0000071f       0x1a D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(exp.o)
+ .debug_pubnames
+                0x00000739       0x1c D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(ldexp.o)
+ .debug_pubnames
+                0x00000755       0x1a D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(log.o)
+ .debug_pubnames
+                0x0000076f       0x23 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly1_eval.o)
+ .debug_pubnames
+                0x00000792       0x22 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly_eval.o)
+ .debug_pubnames
+                0x000007b4       0x1c D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(frexp.o)
+ .debug_pubnames
+                0x000007d0       0x1d D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strcat.o)
+ .debug_pubnames
+                0x000007ed       0x1e D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strncpy.o)
+ .debug_pubnames
+                0x0000080b       0x1e D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(sprintf.o)
+ .debug_pubnames
+                0x00000829       0x52 D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o)
+ .debug_pubnames
+                0x0000087b       0xb4 D:/CrossWorks/ARM/lib/libc_user_libc_v7m_t_le.a(user_libc.o)
+ .debug_pubnames
+                0x0000092f       0x1a D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(abs.o)
+ .debug_pubnames
+                0x00000949       0x1e D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__pow10.o)
+
+.debug_aranges  0x00000000      0x300
+ .debug_aranges
+                0x00000000       0x20 THUMB Release/main.o
+ .debug_aranges
+                0x00000020       0x20 THUMB Release/test.o
+ .debug_aranges
+                0x00000040       0x20 THUMB Release/system_port.o
+ .debug_aranges
+                0x00000060       0x20 THUMB Release/debug.o
+ .debug_aranges
+                0x00000080       0x20 THUMB Release/uart_port.o
+ .debug_aranges
+                0x000000a0       0x20 THUMB Release/list.o
+ .debug_aranges
+                0x000000c0       0x20 THUMB Release/queue.o
+ .debug_aranges
+                0x000000e0       0x20 THUMB Release/tasks.o
+ .debug_aranges
+                0x00000100       0x20 THUMB Release/heap_2.o
+ .debug_aranges
+                0x00000120       0x20 THUMB Release/port.o
+ .debug_aranges
+                0x00000140       0x20 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(pow.o)
+ .debug_aranges
+                0x00000160       0x20 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(exp.o)
+ .debug_aranges
+                0x00000180       0x20 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(ldexp.o)
+ .debug_aranges
+                0x000001a0       0x20 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(log.o)
+ .debug_aranges
+                0x000001c0       0x20 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly1_eval.o)
+ .debug_aranges
+                0x000001e0       0x20 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly_eval.o)
+ .debug_aranges
+                0x00000200       0x20 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(frexp.o)
+ .debug_aranges
+                0x00000220       0x20 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strcat.o)
+ .debug_aranges
+                0x00000240       0x20 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strncpy.o)
+ .debug_aranges
+                0x00000260       0x20 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(sprintf.o)
+ .debug_aranges
+                0x00000280       0x20 D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o)
+ .debug_aranges
+                0x000002a0       0x20 D:/CrossWorks/ARM/lib/libc_user_libc_v7m_t_le.a(user_libc.o)
+ .debug_aranges
+                0x000002c0       0x20 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(abs.o)
+ .debug_aranges
+                0x000002e0       0x20 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__pow10.o)
+
+.debug_str      0x00000000      0xf5d
+ .debug_str     0x00000000       0x55 THUMB Release/main.o
+ .debug_str     0x00000055       0x5d THUMB Release/test.o
+                                 0x69 (size before relaxing)
+ .debug_str     0x000000b2       0x84 THUMB Release/system_port.o
+                                 0x90 (size before relaxing)
+ .debug_str     0x00000136       0x52 THUMB Release/debug.o
+                                 0x5e (size before relaxing)
+ .debug_str     0x00000188       0x57 THUMB Release/uart_port.o
+                                 0x63 (size before relaxing)
+ .debug_str     0x000001df       0x98 THUMB Release/list.o
+                                 0xa4 (size before relaxing)
+ .debug_str     0x00000277      0x1e9 THUMB Release/queue.o
+                                0x1f5 (size before relaxing)
+ .debug_str     0x00000460      0x346 THUMB Release/tasks.o
+                                0x352 (size before relaxing)
+ .debug_str     0x000007a6       0xa2 THUMB Release/heap_2.o
+                                 0xae (size before relaxing)
+ .debug_str     0x00000848      0x137 THUMB Release/port.o
+                                0x143 (size before relaxing)
+ .debug_str     0x0000097f       0x59 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(pow.o)
+                                 0x65 (size before relaxing)
+ .debug_str     0x000009d8       0x59 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(exp.o)
+                                 0x65 (size before relaxing)
+ .debug_str     0x00000a31       0x61 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(ldexp.o)
+                                 0x6d (size before relaxing)
+ .debug_str     0x00000a92       0x59 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(log.o)
+                                 0x65 (size before relaxing)
+ .debug_str     0x00000aeb       0x6f D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly1_eval.o)
+                                 0x7b (size before relaxing)
+ .debug_str     0x00000b5a       0x6d D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly_eval.o)
+                                 0x79 (size before relaxing)
+ .debug_str     0x00000bc7       0x61 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(frexp.o)
+                                 0x6d (size before relaxing)
+ .debug_str     0x00000c28       0x5e D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strcat.o)
+                                 0x6a (size before relaxing)
+ .debug_str     0x00000c86       0x60 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strncpy.o)
+                                 0x6c (size before relaxing)
+ .debug_str     0x00000ce6       0x60 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(sprintf.o)
+                                 0x6c (size before relaxing)
+ .debug_str     0x00000d46       0x8b D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o)
+                                 0x97 (size before relaxing)
+ .debug_str     0x00000dd1       0xd8 D:/CrossWorks/ARM/lib/libc_user_libc_v7m_t_le.a(user_libc.o)
+                                 0xe4 (size before relaxing)
+ .debug_str     0x00000ea9       0x54 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(abs.o)
+                                 0x60 (size before relaxing)
+ .debug_str     0x00000efd       0x60 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__pow10.o)
+                                 0x6c (size before relaxing)
+
+.comment        0x00000000       0x11
+ .comment       0x00000000       0x11 THUMB Release/main.o
+                                 0x12 (size before relaxing)
+ .comment       0x00000000       0x12 THUMB Release/test.o
+ .comment       0x00000000       0x12 THUMB Release/system_port.o
+ .comment       0x00000000       0x12 THUMB Release/debug.o
+ .comment       0x00000000       0x12 THUMB Release/uart_port.o
+ .comment       0x00000000       0x12 THUMB Release/list.o
+ .comment       0x00000000       0x12 THUMB Release/queue.o
+ .comment       0x00000000       0x12 THUMB Release/tasks.o
+ .comment       0x00000000       0x12 THUMB Release/heap_2.o
+ .comment       0x00000000       0x12 THUMB Release/port.o
+ .comment       0x00000000       0x12 THUMB Release/core_cm3.o
+ .comment       0x00000000       0x12 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(pow.o)
+ .comment       0x00000000       0x12 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_infinity.o)
+ .comment       0x00000000       0x12 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(exp.o)
+ .comment       0x00000000       0x12 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(ldexp.o)
+ .comment       0x00000000       0x12 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(log.o)
+ .comment       0x00000000       0x12 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_nan.o)
+ .comment       0x00000000       0x12 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly1_eval.o)
+ .comment       0x00000000       0x12 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly_eval.o)
+ .comment       0x00000000       0x12 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(frexp.o)
+ .comment       0x00000000       0x12 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strcat.o)
+ .comment       0x00000000       0x12 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strncpy.o)
+ .comment       0x00000000       0x12 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(sprintf.o)
+ .comment       0x00000000       0x12 D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o)
+ .comment       0x00000000       0x12 D:/CrossWorks/ARM/lib/libc_user_libc_v7m_t_le.a(user_libc.o)
+ .comment       0x00000000       0x12 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(abs.o)
+ .comment       0x00000000       0x12 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__pow10.o)
+ .comment       0x00000000       0x12 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__hex_lc_uc.o)
+
+.ARM.attributes
+                0x00000000       0x10
+ .ARM.attributes
+                0x00000000       0x10 THUMB Release/main.o
+ .ARM.attributes
+                0x00000010       0x10 THUMB Release/test.o
+ .ARM.attributes
+                0x00000020       0x10 THUMB Release/system_port.o
+ .ARM.attributes
+                0x00000030       0x10 THUMB Release/debug.o
+ .ARM.attributes
+                0x00000040       0x10 THUMB Release/uart_port.o
+ .ARM.attributes
+                0x00000050       0x10 THUMB Release/LM3S_Startup.o
+ .ARM.attributes
+                0x00000060       0x10 THUMB Release/thumb_crt0.o
+ .ARM.attributes
+                0x00000070       0x10 THUMB Release/list.o
+ .ARM.attributes
+                0x00000080       0x10 THUMB Release/queue.o
+ .ARM.attributes
+                0x00000090       0x10 THUMB Release/tasks.o
+ .ARM.attributes
+                0x000000a0       0x10 THUMB Release/heap_2.o
+ .ARM.attributes
+                0x000000b0       0x10 THUMB Release/port.o
+ .ARM.attributes
+                0x000000c0       0x10 THUMB Release/core_cm3.o
+ .ARM.attributes
+                0x000000d0       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__uint32_to_float32.o)
+ .ARM.attributes
+                0x000000e0       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__uint32_to_float64.o)
+ .ARM.attributes
+                0x000000f0       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_uint32.o)
+ .ARM.attributes
+                0x00000100       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float32_to_float64.o)
+ .ARM.attributes
+                0x00000110       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_float32.o)
+ .ARM.attributes
+                0x00000120       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_add.o)
+ .ARM.attributes
+                0x00000130       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_mul.o)
+ .ARM.attributes
+                0x00000140       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(pow.o)
+ .ARM.attributes
+                0x00000150       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__int32_to_float32.o)
+ .ARM.attributes
+                0x00000160       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__int32_to_float64.o)
+ .ARM.attributes
+                0x00000170       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_int32.o)
+ .ARM.attributes
+                0x00000180       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_div.o)
+ .ARM.attributes
+                0x00000190       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_cmp.o)
+ .ARM.attributes
+                0x000001a0       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(fabs.o)
+ .ARM.attributes
+                0x000001b0       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_infinity.o)
+ .ARM.attributes
+                0x000001c0       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(exp.o)
+ .ARM.attributes
+                0x000001d0       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(ldexp.o)
+ .ARM.attributes
+                0x000001e0       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(log.o)
+ .ARM.attributes
+                0x000001f0       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_isnan.o)
+ .ARM.attributes
+                0x00000200       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_nan.o)
+ .ARM.attributes
+                0x00000210       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly1_eval.o)
+ .ARM.attributes
+                0x00000220       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__poly_eval.o)
+ .ARM.attributes
+                0x00000230       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(frexp.o)
+ .ARM.attributes
+                0x00000240       0x10 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(memcpy.o)
+ .ARM.attributes
+                0x00000250       0x10 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(memset.o)
+ .ARM.attributes
+                0x00000260       0x10 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strcat.o)
+ .ARM.attributes
+                0x00000270       0x10 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strncpy.o)
+ .ARM.attributes
+                0x00000280       0x10 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(sprintf.o)
+ .ARM.attributes
+                0x00000290       0x10 D:/CrossWorks/ARM/lib/lib_vfprintf_double_long_long_v7m_t_le.a(__vfprintf_double_long_long.o)
+ .ARM.attributes
+                0x000002a0       0x10 D:/CrossWorks/ARM/lib/libc_user_libc_v7m_t_le.a(user_libc.o)
+ .ARM.attributes
+                0x000002b0       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__uint64_to_float64.o)
+ .ARM.attributes
+                0x000002c0       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_to_uint64.o)
+ .ARM.attributes
+                0x000002d0       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__float64_isinf.o)
+ .ARM.attributes
+                0x000002e0       0x10 D:/CrossWorks/ARM/lib/libm_v7m_t_le.a(__int64_to_float64.o)
+ .ARM.attributes
+                0x000002f0       0x10 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__int64_umod.o)
+ .ARM.attributes
+                0x00000300       0x10 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__int64_udivmod.o)
+ .ARM.attributes
+                0x00000310       0x10 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(strlen.o)
+ .ARM.attributes
+                0x00000320       0x10 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(abs.o)
+ .ARM.attributes
+                0x00000330       0x10 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__pow10.o)
+ .ARM.attributes
+                0x00000340       0x10 D:/CrossWorks/ARM/lib/libc_v7m_t_le.a(__hex_lc_uc.o)
