@@ -1,0 +1,27 @@
+Buttons (input):
+RA+			-> PC2
+RA-			-> PC3
+DEC+		-> PC4
+DEC-		-> PC5
+
+Switches (input):
+REV_DEC		-> PC0
+REV_RA		-> PC1
+HEM_N		-> PD3
+HEM_S		-> PD4
+SPEED_2X	-> PD5
+SPEED_8X	-> PD6
+SPEED_16X	-> PD7
+
+LEDs (output):
+LED_GREEN	-> PB1
+LED_RED		-> PB2
+
+Connectivity:
+UART_RXD	-> PD0
+UART_TXD	-> PD1
+
+ISP:
+SPI_MOSI	-> PB3
+SPI_MISO	-> PB4
+SPI_SCK		-> PB5
