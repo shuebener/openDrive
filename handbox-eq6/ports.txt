@@ -14,8 +14,8 @@ SPEED_8X	-> PD6
 SPEED_16X	-> PD7
 
 LEDs (output):
-LED_GREEN	-> PB1	-> PB2
-LED_RED		-> PB2	-> PB1
+LED_RED		-> PB1
+LED_GREEN	-> PB2
 
 Connectivity:
 UART_RXD	-> PD0

@@ -35,14 +35,17 @@ int main(void) {
 	initGPIO();
 	initTimer1();
 	UART0_Init();
-	
-	
+			
+	sei(); //Enable Interrupts	
 	printf("Controller initialized...\n");
-		
-	sei(); //Enable Interrupts
 	
+	uint8_t first=1;
 	while(1) {		
 			
+		if(first) {
+			first=0;
+			PORTB |= (1 << PB1); //RED_LED on			
+		}		
 			
 		if(tmp_cnt1!=Timer1_CNT && !(Timer1_CNT%2)) {
 			//Check every 2x5ms for changed input pins (incl. debouncing)
@@ -55,7 +58,7 @@ int main(void) {
 		Button_CheckForAction();
 	
 
-		//if(tmp_cnt2 != Timer1_CNT && !(Timer1_CNT%400)) {
+		//if(tmp_cnt2 != Timer1_CNT && !(Timer1_CNT%200)) {
 		if(tmp_cnt2 != Timer1_CNT && !(Timer1_CNT%10)) {
 			tmp_cnt2=Timer1_CNT;
 			//10x5ms TickRate...
@@ -63,15 +66,13 @@ int main(void) {
 			if(!tgl) {
 				printf("Ping\n");
 				
-				PORTB |= (1 << PB1);
-				PORTB &= ~(1 << PB2);				
+				PORTB |= (1 << PB2);				
 				
 				tgl=1;
 			} else {
 				printf("Pong\n");
 
-				PORTB |= (1 << PB2);
-				PORTB &= ~(1 << PB1);				
+				PORTB &= ~(1 << PB2);				
 				
 				tgl=0;
 			}			
@@ -82,7 +83,6 @@ int main(void) {
 		if(Timer1_CNT >= 60000) {Timer1_CNT=0;}
 	}
 	
-	printf("blub\n");
 	return 0;
 }
 
@@ -93,8 +93,8 @@ void initGPIO(void) {
 	//Port x Data Direction Register
 	//(1 = Output / 0 = Input)
 	DDRB = (1 << PB0)	//<unused> => output
-	     | (1 << PB1)	//LED_GREEN => output
-		 | (1 << PB2)	//LED_RED => output
+	     | (1 << PB1)	//LED_RED => output
+		 | (1 << PB2)	//LED_GREEN => output
 		 | (1 << PB3)	//<unused> => output
 		 | (1 << PB4)	//<unused> => output
 		 | (1 << PB5)	//<unused> => output
@@ -124,8 +124,8 @@ void initGPIO(void) {
 	//Input: PullUp On/Off
 	//Output: Port On/Off		
 	PORTB = (0 << PB0)	//<unused> => output => Off
-	      | (0 << PB1)	//LED_GREEN => output => Off
-		  | (0 << PB2)	//LED_RED => output => Off
+	      | (0 << PB1)	//LED_RED => output => Off
+		  | (0 << PB2)	//LED_GREEN => output => Off
 		  | (0 << PB3)	//<unused> => output => Off
 		  | (0 << PB4)	//<unused> => output => Off
 		  | (0 << PB5)	//<unused> => output => Off
