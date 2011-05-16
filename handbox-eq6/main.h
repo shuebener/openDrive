@@ -13,7 +13,6 @@
 #define TEST1_H_
 
 void initGPIO(void);
-void initTimer0(void);
 void initTimer1(void);
 
 

@@ -16,7 +16,6 @@
 #include "button.h"
 extern FILE UART0_STDOutHandler;
 
-volatile uint32_t Timer0_CNT = 0;
 volatile uint32_t Timer1_CNT = 0; //5ms TickRate
 
 
@@ -25,8 +24,15 @@ int main(void) {
 	uint32_t tmp_cnt1=-1, tmp_cnt2=0;
 	uint8_t tgl=0;
 	
+	PRR = (1 << PRTWI)			//Power Reduction TWI
+	    | (1 << PRTIM2)			//Power Reduction Timer/Counter2
+		| (1 << PRTIM0)			//Power Reduction Timer/Counter0
+		| (0 << PRTIM1)			//Power Reduction Timer/Counter1
+		| (1 << PRSPI)			//Power Reduction Serial Peripheral Interface
+		| (0 << PRUSART0)		//Power Reduction USART0
+		| (1 << PRADC);			//Power Reduction ADC
+	
 	initGPIO();
-	//initTimer0();
 	initTimer1();
 	UART0_Init();
 	
@@ -36,8 +42,8 @@ int main(void) {
 	sei(); //Enable Interrupts
 	
 	while(1) {		
-		
-		
+			
+			
 		if(tmp_cnt1!=Timer1_CNT && !(Timer1_CNT%2)) {
 			//Check every 2x5ms for changed input pins (incl. debouncing)
 			tmp_cnt1=Timer1_CNT;	
@@ -49,8 +55,8 @@ int main(void) {
 		Button_CheckForAction();
 	
 
-
-		if(tmp_cnt2 != Timer1_CNT && !(Timer1_CNT%400)) {
+		//if(tmp_cnt2 != Timer1_CNT && !(Timer1_CNT%400)) {
+		if(tmp_cnt2 != Timer1_CNT && !(Timer1_CNT%10)) {
 			tmp_cnt2=Timer1_CNT;
 			//10x5ms TickRate...
 			
@@ -71,9 +77,7 @@ int main(void) {
 			}			
 			
 		}		
-
-		
-		
+	
 		
 		if(Timer1_CNT >= 60000) {Timer1_CNT=0;}
 	}
@@ -148,28 +152,6 @@ void initGPIO(void) {
 	return;
 }
 
-void initTimer0(void) {
-	
-	//Timer/Counter Interrupt Mask Register
-	TIMSK0 = (0 << OCIE0B)		//Output Compare Match B Interrupt Enable
-	       | (0 << OCIE0A)		//Output Compare Match A Interrupt Enable
-		   | (1 << TOIE0);		//Overflow Interrupt Enable	
-	
-	//Timer/Counter Control Register A
-	TCCR0A = (0b00 << COM0A0)	//Compare Match Output A Mode: Normal port operation, OC0A disconnected.
-		   | (0b00 << COM0B0)	//Compare Match Output B Mode: Normal port operation, OC0B disconnected.
-		   | (0b00 << WGM00);	//Waveform Generation Mode: normal
-	
-	//Timer/Counter Control Register B
-	TCCR0B = (0 << FOC0A)		//Force Output Compare A
-	       | (0 << FOC0B)		//Force Output Compare B
-		   | (0 << WGM02)		//Waveform Generation Mode: normal
-		   | (0b001 << CS00);	//Clock Select: CLK
-
-
-	return;
-}
-
 
 void initTimer1(void) {
 	
@@ -185,14 +167,14 @@ void initTimer1(void) {
 		   | (0 << TOIE1);		//Overflow Interrupt Enable	
 	
 	//Timer/Counter1 Control Register A
-	TCCR1A = (0b10 << COM1A0)	//Compare Output Mode for Channel A: Clear on Compare Match
+	TCCR1A = (0b00 << COM1A0)	//Compare Output Mode for Channel A: Normal port operation
 	       | (0b00 << COM1B0)	//Compare Output Mode for Channel B: Normal port operation
-		   | (0b00 << WGM10);	//Waveform Generation Mode
+		   | (0b00 << WGM10);	//Waveform Generation Mode -> Timer/Counter Mode of Operation: CTC
 		   
 	//Timer/Counter1 Control Register B
 	TCCR1B = (0 << ICNC1)		//Input Capture Noise Canceler
 	       | (0 << ICES1)		//Input Capture Edge Select
-		   | (0b01 << WGM12)	//Waveform Generation Mode
+		   | (0b01 << WGM12)	//Waveform Generation Mode -> Timer/Counter Mode of Operation: CTC
 		   | (0b001 << CS10);	//Clock Select
 
 /*		   
@@ -205,11 +187,6 @@ void initTimer1(void) {
 	return;
 }
 
-
-//Timer0 Overflow Interrupt
-ISR(TIMER0_OVF_vect) {
-	Timer0_CNT++;	
-}
 
 //Timer1 Compare Match Interrupt
 ISR(TIMER1_COMPA_vect) {

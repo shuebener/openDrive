@@ -19,8 +19,20 @@ BUTTON_STATUS_t Button_Status = BUTTON_STATUS_DEFAULT;
 void Button_Update(void) {
 	static BUTTON_STATUS_t Button_Status_TMP = BUTTON_STATUS_DEFAULT;	
 	
-	//RA+ (low-active)
-	if( PINC & (1<<PINC3) ) {
+	//RA+
+	if( !(PINC & (1<<PINC3)) ) {
+		//Button On
+		if(Button_Status_TMP.RAp == BUTTON_ON) {
+			//Button Off for the second time...
+			if(Button_Status.RAp != BUTTON_ON) {
+				Button_Status.RAp = BUTTON_ON;
+				Button_Status.RAp_Change = 1;
+			}				
+		} else {
+			//Button Off for the first time...
+			Button_Status_TMP.RAp = BUTTON_ON;
+		}			
+	} else {
 		//Button Off
 		if(Button_Status_TMP.RAp == BUTTON_OFF) {
 			//Button Off for the second time...
@@ -32,34 +44,10 @@ void Button_Update(void) {
 			//Button Off for the first time...
 			Button_Status_TMP.RAp = BUTTON_OFF;
 		}
-	} else {
-		//Button On
-		if(Button_Status_TMP.RAp == BUTTON_ON) {
-			//Button Off for the second time...
-			if(Button_Status.RAp != BUTTON_ON) {
-				Button_Status.RAp = BUTTON_ON;
-				Button_Status.RAp_Change = 1;
-			}				
-		} else {
-			//Button Off for the first time...
-			Button_Status_TMP.RAp = BUTTON_ON;
-		}	
 	}	
 	
-	//RA- (low-active)
-	if( PINC & (1<<PINC2) ) {
-		//Button Off
-		if(Button_Status_TMP.RAm == BUTTON_OFF) {
-			//Button Off for the second time...
-			if(Button_Status.RAm != BUTTON_OFF) {
-				Button_Status.RAm = BUTTON_OFF;	
-				Button_Status.RAm_Change = 1;
-			}			
-		} else {
-			//Button Off for the first time...
-			Button_Status_TMP.RAm = BUTTON_OFF;
-		}
-	} else {
+	//RA-
+	if( !(PINC & (1<<PINC2)) ) {
 		//Button On
 		if(Button_Status_TMP.RAm == BUTTON_ON) {
 			//Button Off for the second time...
@@ -71,22 +59,22 @@ void Button_Update(void) {
 			//Button Off for the first time...
 			Button_Status_TMP.RAm = BUTTON_ON;
 		}	
-	}	
-	
-	//DEC+ (low-active)
-	if( PINC & (1<<PINC5) ) {
+	} else {
 		//Button Off
-		if(Button_Status_TMP.DECp == BUTTON_OFF) {
+		if(Button_Status_TMP.RAm == BUTTON_OFF) {
 			//Button Off for the second time...
-			if(Button_Status.DECp != BUTTON_OFF) {
-				Button_Status.DECp = BUTTON_OFF;
-				Button_Status.DECp_Change = 1;
-			}				
+			if(Button_Status.RAm != BUTTON_OFF) {
+				Button_Status.RAm = BUTTON_OFF;	
+				Button_Status.RAm_Change = 1;
+			}			
 		} else {
 			//Button Off for the first time...
-			Button_Status_TMP.DECp = BUTTON_OFF;
-		}
-	} else {
+			Button_Status_TMP.RAm = BUTTON_OFF;
+		}		
+	}	
+	
+	//DEC+
+	if( !(PINC & (1<<PINC5)) ) {
 		//Button On
 		if(Button_Status_TMP.DECp == BUTTON_ON) {
 			//Button Off for the second time...
@@ -97,24 +85,24 @@ void Button_Update(void) {
 		} else {
 			//Button Off for the first time...
 			Button_Status_TMP.DECp = BUTTON_ON;
-		}	
-	}	
-	
-	
-	//DEC- (low-active)
-	if( PINC & (1<<PINC4) ) {
+		}
+	} else {	
 		//Button Off
-		if(Button_Status_TMP.DECm == BUTTON_OFF) {
+		if(Button_Status_TMP.DECp == BUTTON_OFF) {
 			//Button Off for the second time...
-			if(Button_Status.DECm != BUTTON_OFF) {
-				Button_Status.DECm = BUTTON_OFF;
-				Button_Status.DECm_Change = 1;
+			if(Button_Status.DECp != BUTTON_OFF) {
+				Button_Status.DECp = BUTTON_OFF;
+				Button_Status.DECp_Change = 1;
 			}				
 		} else {
 			//Button Off for the first time...
-			Button_Status_TMP.DECm = BUTTON_OFF;
-		}
-	} else {
+			Button_Status_TMP.DECp = BUTTON_OFF;
+		}		
+	}	
+	
+	
+	//DEC-
+	if( !(PINC & (1<<PINC4)) ) {
 		//Button On
 		if(Button_Status_TMP.DECm == BUTTON_ON) {
 			//Button Off for the second time...
@@ -125,7 +113,19 @@ void Button_Update(void) {
 		} else {
 			//Button Off for the first time...
 			Button_Status_TMP.DECm = BUTTON_ON;
-		}	
+		}
+	} else {	
+		//Button Off
+		if(Button_Status_TMP.DECm == BUTTON_OFF) {
+			//Button Off for the second time...
+			if(Button_Status.DECm != BUTTON_OFF) {
+				Button_Status.DECm = BUTTON_OFF;
+				Button_Status.DECm_Change = 1;
+			}				
+		} else {
+			//Button Off for the first time...
+			Button_Status_TMP.DECm = BUTTON_OFF;
+		}		
 	}		
 
 
