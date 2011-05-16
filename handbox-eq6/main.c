@@ -30,7 +30,9 @@ int main(void) {
 	initTimer1();
 	UART0_Init();
 	
+	
 	printf("Controller initialized...\n");
+		
 	sei(); //Enable Interrupts
 	
 	while(1) {		
@@ -45,28 +47,38 @@ int main(void) {
 		
 		//Check for changed buttons
 		Button_CheckForAction();
-		
+	
 
 
-		if(tmp_cnt2 != Timer1_CNT && !(Timer1_CNT%10)) {
+		if(tmp_cnt2 != Timer1_CNT && !(Timer1_CNT%400)) {
 			tmp_cnt2=Timer1_CNT;
 			//10x5ms TickRate...
 			
 			if(!tgl) {
 				printf("Ping\n");
+				
+				PORTB |= (1 << PB1);
+				PORTB &= ~(1 << PB2);				
+				
 				tgl=1;
 			} else {
 				printf("Pong\n");
+
+				PORTB |= (1 << PB2);
+				PORTB &= ~(1 << PB1);				
+				
 				tgl=0;
 			}			
 			
 		}		
-		
+
 		
 		
 		
 		if(Timer1_CNT >= 60000) {Timer1_CNT=0;}
 	}
+	
+	printf("blub\n");
 	return 0;
 }
 

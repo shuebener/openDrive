@@ -1,21 +1,21 @@
 Buttons (input):
-RA+			-> PC2
-RA-			-> PC3
-DEC+		-> PC4
-DEC-		-> PC5
+RA+			-> PC2	-> PC3
+RA-			-> PC3	-> PC2
+DEC+		-> PC4	-> PC5
+DEC-		-> PC5	-> PC4
 
 Switches (input):
-REV_DEC		-> PC0
-REV_RA		-> PC1
-HEM_N		-> PD3
-HEM_S		-> PD4
-SPEED_2X	-> PD5
-SPEED_8X	-> PD6
-SPEED_16X	-> PD7
+REV_DEC		-> PC0 (low active)
+REV_RA		-> PC1 (low active)
+HEM_N		-> PD3 (low active)
+HEM_S		-> PD4 (low active)
+SPEED_2X	-> PD5 (low active)
+SPEED_8X	-> PD6 (low active)
+SPEED_16X	-> PD7 (low active)
 
 LEDs (output):
-LED_GREEN	-> PB1
-LED_RED		-> PB2
+LED_GREEN	-> PB1	-> PB2
+LED_RED		-> PB2???
 
 Connectivity:
 UART_RXD	-> PD0
