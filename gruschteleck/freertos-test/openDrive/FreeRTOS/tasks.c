@@ -1,5 +1,5 @@
 /*
-    FreeRTOS V6.1.1 - Copyright (C) 2011 Real Time Engineers Ltd.
+    FreeRTOS V6.1.0 - Copyright (C) 2010 Real Time Engineers Ltd.
 
     ***************************************************************************
     *                                                                         *
@@ -513,7 +513,7 @@ tskTCB * pxNewTCB;
 	else
 	{
 		xReturn = errCOULD_NOT_ALLOCATE_REQUIRED_MEMORY;
-		traceTASK_CREATE_FAILED();
+		traceTASK_CREATE_FAILED( pxNewTCB );
 	}
 
 	if( xReturn == pdPASS )
@@ -1068,7 +1068,7 @@ portBASE_TYPE xReturn;
 		macro must be defined to configure the timer/counter used to generate
 		the run time counter time base. */
 		portCONFIGURE_TIMER_FOR_RUN_TIME_STATS();
-		
+
 		/* Setting up the timer tick is hardware specific and thus in the
 		portable interface. */
 		if( xPortStartScheduler() )
@@ -1282,23 +1282,13 @@ unsigned portBASE_TYPE uxTaskGetNumberOfTasks( void )
 	void vTaskGetRunTimeStats( signed char *pcWriteBuffer )
 	{
 	unsigned portBASE_TYPE uxQueue;
-	unsigned long ulTotalRunTime;
+	unsigned long ulTotalRunTime = portGET_RUN_TIME_COUNTER_VALUE();
 
 		/* This is a VERY costly function that should be used for debug only.
 		It leaves interrupts disabled for a LONG time. */
 
 		vTaskSuspendAll();
 		{
-			#ifdef portALT_GET_RUN_TIME_COUNTER_VALUE
-				portALT_GET_RUN_TIME_COUNTER_VALUE( ulTotalRunTime );
-			#else
-				ulTotalRunTime = portGET_RUN_TIME_COUNTER_VALUE();
-			#endif
-
-			/* Divide ulTotalRunTime by 100 to make the percentage caluclations
-			simpler in the prvGenerateRunTimeStatsForTasksInList() function. */
-			ulTotalRunTime /= 100UL;
-			
 			/* Run through all the lists that could potentially contain a TCB,
 			generating a table of run timer percentages in the provided
 			buffer. */
@@ -1604,13 +1594,7 @@ void vTaskSwitchContext( void )
 
 	#if ( configGENERATE_RUN_TIME_STATS == 1 )
 	{
-		unsigned long ulTempCounter;
-		
-			#ifdef portALT_GET_RUN_TIME_COUNTER_VALUE
-				portALT_GET_RUN_TIME_COUNTER_VALUE( ulTempCounter );
-			#else
-				ulTempCounter = portGET_RUN_TIME_COUNTER_VALUE();
-			#endif
+		unsigned long ulTempCounter = portGET_RUN_TIME_COUNTER_VALUE();
 
 			/* Add the amount of time the task has been running to the accumulated
 			time so far.  The time the task started running was stored in
@@ -2129,40 +2113,19 @@ tskTCB *pxNewTCB;
 				}
 				else
 				{
-					/* What percentage of the total run time has the task used?
-					This will always be rounded down to the nearest integer. 
-					ulTotalRunTime has already been divided by 100. */
-					ulStatsAsPercentage = pxNextTCB->ulRunTimeCounter / ulTotalRunTime;
+					/* What percentage of the total run time as the task used?
+					This will always be rounded down to the nearest integer. */
+					ulStatsAsPercentage = ( 100UL * pxNextTCB->ulRunTimeCounter ) / ulTotalRunTime;
 
 					if( ulStatsAsPercentage > 0UL )
 					{
-						#ifdef portLU_PRINTF_SPECIFIER_REQUIRED
-						{
-							sprintf( pcStatsString, ( char * ) "%s\t\t%lu\t\t%lu%%\r\n", pxNextTCB->pcTaskName, pxNextTCB->ulRunTimeCounter, ulStatsAsPercentage );							
-						}
-						#else
-						{
-							/* sizeof( int ) == sizeof( long ) so a smaller
-							printf() library can be used. */
-							sprintf( pcStatsString, ( char * ) "%s\t\t%u\t\t%u%%\r\n", pxNextTCB->pcTaskName, ( unsigned int ) pxNextTCB->ulRunTimeCounter, ( unsigned int ) ulStatsAsPercentage );
-						}
-						#endif
+						sprintf( pcStatsString, ( char * ) "%s\t\t%u\t\t%u%%\r\n", pxNextTCB->pcTaskName, ( unsigned int ) pxNextTCB->ulRunTimeCounter, ( unsigned int ) ulStatsAsPercentage );
 					}
 					else
 					{
 						/* If the percentage is zero here then the task has
 						consumed less than 1% of the total run time. */
-						#ifdef portLU_PRINTF_SPECIFIER_REQUIRED
-						{
-							sprintf( pcStatsString, ( char * ) "%s\t\t%lu\t\t<1%%\r\n", pxNextTCB->pcTaskName, pxNextTCB->ulRunTimeCounter );							
-						}
-						#else
-						{
-							/* sizeof( int ) == sizeof( long ) so a smaller
-							printf() library can be used. */
-							sprintf( pcStatsString, ( char * ) "%s\t\t%u\t\t<1%%\r\n", pxNextTCB->pcTaskName, ( unsigned int ) pxNextTCB->ulRunTimeCounter );
-						}
-						#endif
+						sprintf( pcStatsString, ( char * ) "%s\t\t%u\t\t<1%%\r\n", pxNextTCB->pcTaskName, ( unsigned int ) pxNextTCB->ulRunTimeCounter );
 					}
 				}
 

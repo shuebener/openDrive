@@ -19,6 +19,7 @@ void Action_DECpButtonUnpressed(void);
 void Action_DECmButtonPressed(void);
 void Action_DECmButtonUnpressed(void);
 
+void Action_ShowSwitchStatus(void);
 void SendCmd(char CMD[21], char Value[6]);
 void getSpeed(uint8_t SS_Speed, char Speed[]);
 
