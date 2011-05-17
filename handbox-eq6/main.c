@@ -16,6 +16,7 @@
 #include "button.h"
 extern FILE UART0_STDOutHandler;
 
+volatile uint32_t Timer0_CNT = 0;
 volatile uint32_t Timer1_CNT = 0; //5ms TickRate
 
 
@@ -32,7 +33,8 @@ int main(void) {
 		| (0 << PRUSART0)		//Power Reduction USART0
 		| (1 << PRADC);			//Power Reduction ADC
 	
-	initGPIO();
+	initGPIO();	
+	//initTimer0();
 	initTimer1();
 	UART0_Init();
 			
@@ -44,7 +46,7 @@ int main(void) {
 			
 		if(first) {
 			first=0;
-			PORTB |= (1 << PB1); //RED_LED on			
+			LED_RED_ON;			
 		}		
 			
 		if(tmp_cnt1!=Timer1_CNT && !(Timer1_CNT%2)) {
@@ -65,15 +67,9 @@ int main(void) {
 			
 			if(!tgl) {
 				printf("Ping\n");
-				
-				PORTB |= (1 << PB2);				
-				
 				tgl=1;
 			} else {
 				printf("Pong\n");
-
-				PORTB &= ~(1 << PB2);				
-				
 				tgl=0;
 			}			
 			
@@ -152,6 +148,27 @@ void initGPIO(void) {
 	return;
 }
 
+void initTimer0(void) {
+	
+	//Timer/Counter Interrupt Mask Register
+	TIMSK0 = (0 << OCIE0B)		//Output Compare Match B Interrupt Enable
+	       | (0 << OCIE0A)		//Output Compare Match A Interrupt Enable
+		   | (1 << TOIE0);		//Overflow Interrupt Enable	
+	
+	//Timer/Counter Control Register A
+	TCCR0A = (0b00 << COM0A0)	//Compare Match Output A Mode: Normal port operation, OC0A disconnected.
+		   | (0b00 << COM0B0)	//Compare Match Output B Mode: Normal port operation, OC0B disconnected.
+		   | (0b00 << WGM00);	//Waveform Generation Mode: normal
+	
+	//Timer/Counter Control Register B
+	TCCR0B = (0 << FOC0A)		//Force Output Compare A
+	       | (0 << FOC0B)		//Force Output Compare B
+		   | (0 << WGM02)		//Waveform Generation Mode: normal
+		   | (0b001 << CS00);	//Clock Select: CLK
+
+
+	return;
+}
 
 void initTimer1(void) {
 	
@@ -187,6 +204,10 @@ void initTimer1(void) {
 	return;
 }
 
+//Timer0 Overflow Interrupt
+ISR(TIMER0_OVF_vect) {
+	Timer0_CNT++;	
+}
 
 //Timer1 Compare Match Interrupt
 ISR(TIMER1_COMPA_vect) {

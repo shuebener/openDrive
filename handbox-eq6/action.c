@@ -12,6 +12,7 @@
 #include <avr/io.h>
 #include <avr/interrupt.h> 
 
+#include "main.h"
 #include "action.h"
 #include "myuart.h"
 #include "button.h"
@@ -21,50 +22,94 @@ extern FILE UART0_STDOutHandler;
 extern SWITCH_STATUS_t Switch_Status;
 
 void Action_RApButtonPressed(void) {	
-	printf("Action_RApButtonPressed\n");
-	Action_ShowSwitchStatus();
+	LED_GREEN_ON;
+
+	if(Switch_Status.Hemisphere == SWITCH_SS_HEM_N) {SendCmd("SetHemisphere","North");}
+	else {SendCmd("SetHemisphere","South");}
+
+	if(Switch_Status.Reverse_Ra) {SendCmd("SetReverseRa","On");}
+	else {SendCmd("SetReverseRa","Off");}
+	
+	char Speed[6];
+	getSpeed(Switch_Status.Speed, Speed);
+	SendCmd("SetSpeed",Speed);
+	
+	SendCmd("Ra_P_Start","");
 	return;
 }
 
 void Action_RApButtonUnpressed(void) {
-	printf("Action_RApButtonUnpressed\n");
-	Action_ShowSwitchStatus();
+	SendCmd("RaStop","");
+	LED_RED_ON;
 	return;
 }
 
 void Action_RAmButtonPressed(void) {
-	printf("Action_RAmButtonPressed\n");
-	Action_ShowSwitchStatus();
+	LED_GREEN_ON;
+	
+	if(Switch_Status.Hemisphere == SWITCH_SS_HEM_N) {SendCmd("SetHemisphere","North");}
+	else {SendCmd("SetHemisphere","South");}
+
+	if(Switch_Status.Reverse_Ra) {SendCmd("SetReverseRa","On");}
+	else {SendCmd("SetReverseRa","Off");}
+	
+	char Speed[6];
+	getSpeed(Switch_Status.Speed, Speed);
+	SendCmd("SetSpeed",Speed);
+	
+	SendCmd("Ra_M_Start","");
 	return;
 }
 
 void Action_RAmButtonUnpressed(void) {
-	printf("Action_RAmButtonUnpressed\n");
-	Action_ShowSwitchStatus();
+	SendCmd("RaStop","");
+	LED_RED_ON;
 	return;
 }
 
 void Action_DECpButtonPressed(void) {
-	printf("Action_DECpButtonPressed\n");
-	Action_ShowSwitchStatus();
+	LED_GREEN_ON;
+
+	if(Switch_Status.Hemisphere == SWITCH_SS_HEM_N) {SendCmd("SetHemisphere","North");}
+	else {SendCmd("SetHemisphere","South");}
+
+	if(Switch_Status.Reverse_Ra) {SendCmd("SetReverseRa","On");}
+	else {SendCmd("SetReverseRa","Off");}
+	
+	char Speed[6];
+	getSpeed(Switch_Status.Speed, Speed);
+	SendCmd("SetSpeed",Speed);
+	
+	SendCmd("Dec_P_Start","");
 	return;
 }
 
 void Action_DECpButtonUnpressed(void) {
-	printf("Action_DECpButtonUnpressed\n");
-	Action_ShowSwitchStatus();
+	SendCmd("DecStop","");
+	LED_RED_ON;
 	return;
 }
 
 void Action_DECmButtonPressed(void) {
-	printf("Action_DECmButtonPressed\n");
-	Action_ShowSwitchStatus();
+	LED_GREEN_ON;
+
+	if(Switch_Status.Hemisphere == SWITCH_SS_HEM_N) {SendCmd("SetHemisphere","North");}
+	else {SendCmd("SetHemisphere","South");}
+
+	if(Switch_Status.Reverse_Ra) {SendCmd("SetReverseRa","On");}
+	else {SendCmd("SetReverseRa","Off");}
+	
+	char Speed[6];
+	getSpeed(Switch_Status.Speed, Speed);
+	SendCmd("SetSpeed",Speed);
+	
+	SendCmd("Dec_M_Start","");
 	return;
 }
 
 void Action_DECmButtonUnpressed(void) {
-	printf("Action_DECmButtonUnpressed\n");
-	Action_ShowSwitchStatus();
+	SendCmd("DecStop","");
+	LED_RED_ON;
 	return;
 }
 
