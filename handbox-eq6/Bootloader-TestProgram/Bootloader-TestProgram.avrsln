@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# AvrStudio Solution File, Format Version 11.00
+Project("{D1100916-62DA-4D80-A9B4-55A1E7CCEEB3}") = "Bootloader-TestProgram", "Bootloader-TestProgram.avrgccproj", "{3333E002-C134-413D-97D8-2B2F1B16E5C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3333E002-C134-413D-97D8-2B2F1B16E5C5}.Debug|AVR.ActiveCfg = Debug|AVR
+		{3333E002-C134-413D-97D8-2B2F1B16E5C5}.Debug|AVR.Build.0 = Debug|AVR
+		{3333E002-C134-413D-97D8-2B2F1B16E5C5}.Release|AVR.ActiveCfg = Release|AVR
+		{3333E002-C134-413D-97D8-2B2F1B16E5C5}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
