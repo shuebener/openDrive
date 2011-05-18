@@ -11,7 +11,7 @@
     <AvrGccProjectExtensions>
     </AvrGccProjectExtensions>
     <AssemblyName>Test1</AssemblyName>
-    <Name>Handbox-EQ6</Name>
+    <Name>Handbox-EQ6-Program</Name>
     <RootNamespace>Test1</RootNamespace>
     <avrtool>com.atmel.avrdbg.tool.simulator</avrtool>
     <avrtoolinterface />
