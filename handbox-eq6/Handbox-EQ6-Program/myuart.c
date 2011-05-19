@@ -5,8 +5,11 @@
  *  Author: Huebener.Se
  */ 
 
+#ifndef UART_NOSTDLIB
 #include <stdio.h>
 #include <stdlib.h>
+#endif
+
 #include <avr/io.h>
 #include <avr/interrupt.h> 
 #include <util/atomic.h>
@@ -25,11 +28,19 @@ volatile struct {
 	uint8_t read;
 	uint8_t write;
 } UART_TXBuffer = {{}, 0, 0};
+	
+volatile uint8_t UART0_LastRxError = UART_RX_ERROR_NOERROR;
 
+
+#ifndef UART_NOSTDLIB
 //stdout handler for printf...
 volatile FILE UART0_STDOutHandler = FDEV_SETUP_STREAM(UART0_SendCharSTDOUT, NULL, _FDEV_SETUP_WRITE );	
-	
+#endif
 
+
+/************************************************************************/
+/* Function: UART0_Init                                                 */
+/************************************************************************/
  void UART0_Init(void) {
 	
 	//USART Baud Rate Registers
@@ -67,11 +78,9 @@ volatile FILE UART0_STDOutHandler = FDEV_SETUP_STREAM(UART0_SendCharSTDOUT, NULL
 }
 
 
-int UART0_SendCharSTDOUT(char sendchar, FILE *stream) {	
-	UART0_SendChar(sendchar);	 
-	return 0;
-}
-
+/************************************************************************/
+/* Function: UART0_SendChar                                             */
+/************************************************************************/
 void UART0_SendChar(char sendchar) {
 	
 	//Daten in den TX-Buffer schreiben...
@@ -88,7 +97,47 @@ void UART0_SendChar(char sendchar) {
 }
 
 
-//USART, UDR Empty Handler
+/************************************************************************/
+/* Function: UART0_SendCharSTDOUT                                       */
+/************************************************************************/
+#ifndef UART_NOSTDLIB
+int UART0_SendCharSTDOUT(char sendchar, FILE *stream) {	
+	UART0_SendChar(sendchar);	 
+	return 0;
+}
+#endif
+
+
+/************************************************************************/
+/* Function: UART0_SendString                                           */
+/************************************************************************/
+void UART0_SendString(char *string) {
+    while (*string) {
+        UART0_SendChar(*string);
+        string++;
+    }	
+}
+
+
+/************************************************************************/
+/* Function: UART0_ReadChar                                             */
+/************************************************************************/
+uint8_t UART0_ReadChar(char *readchar) {
+	if( UART_RXBuffer.read == UART_RXBuffer.write ) {
+		*readchar = '\0';
+		return(UART_NO_CHAR_AVAILABLE);
+	}	
+	
+	*readchar = UART_RXBuffer.data[UART_RXBuffer.read];
+	UART_RXBuffer.read = (UART_RXBuffer.read+1) & UART_RX_BUFFER_MASK;	
+	
+	return(UART_CHAR_AVAILABLE);	
+}
+
+
+/************************************************************************/
+/* Interrupt: USART, UDR Empty Handler                                  */
+/************************************************************************/
 ISR(USART_UDRE_vect) {
 
 	if (UART_TXBuffer.read == UART_TXBuffer.write) {
@@ -103,34 +152,25 @@ ISR(USART_UDRE_vect) {
 	return;	
 }
 
-//USART, RX Complete Handler
+
+/************************************************************************/
+/* Interrupt: USART, RX Complete Handler                                */
+/************************************************************************/
 ISR(USART_RX_vect) {
 
-	uint8_t xxx;
 	uint8_t status = UCSR0A;
 	char receivedchar = UDR0;
-	
-	//Frame Error
-	if(status & (1<<FE0)) {
-		xxx=1;
-	}	
-	
-	//Data OverRun
-	if(status & (1<<DOR0)) {
-		xxx=2;
-	}
-		
-	//USART Parity Error
-	if(status & (1<<UPE0)) {
-		xxx=3;
-	}
 
-	//Daten in den RX-Buffer schreiben...
-	uint8_t next = ((UART_RXBuffer.write + 1) & UART_RX_BUFFER_MASK);
-	while(UART_RXBuffer.read == next) {} //wait for free space in buffer..	
+	if(status & (1<<FE0)) {UART0_LastRxError = UART_RX_ERROR_FRAMEERROR; return;} //Frame Error
+	if(status & (1<<DOR0)) {UART0_LastRxError = UART_RX_ERROR_DATAOVERRUN; return;} //Data OverRun
+	if(status & (1<<UPE0)) {UART0_LastRxError = UART_RX_ERROR_PARITYERROR; return;} //USART Parity Error
+
+	//write data to RX-Buffer...
+	uint8_t next = ((UART_RXBuffer.write + 1) & UART_RX_BUFFER_MASK);	
+	if(UART_RXBuffer.read == next) {UART0_LastRxError = UART_RX_ERROR_FIFOOVERRUN; return;} //Full FIFO-Buffer...
 	
 	UART_RXBuffer.data[UART_RXBuffer.write] = receivedchar;
-	UART_RXBuffer.write = next;	
+	UART_RXBuffer.write = next;
 
 	return;	
 }
