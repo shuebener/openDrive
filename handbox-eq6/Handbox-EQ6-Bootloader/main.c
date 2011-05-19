@@ -5,32 +5,35 @@
  *  Author: Huebener.Se
  */ 
 
+//Linker!!!
+//-Ttext=0x1800
+
+
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <avr/boot.h>
-#include <util/delay.h>
 
 #include "main.h"
+#include "myuart.h"
 
 int main(void) {
-    unsigned int 	c=0;				/* Empfangenes Zeichen + Statuscode */
-    unsigned char	temp,				/* Variable */
-                    flag=1,				/* Flag zum steuern der Endlosschleife */
-					p_mode=0;			/* Flag zum steuern des Programmiermodus */
-    void (*start)( void ) = 0x0000;     /* Funktionspointer auf 0x0000 */
+	UART0_Init();	
+    void (*start)( void ) = 0x0000;
  
     /* Interrupt Vektoren verbiegen */
-    temp = MCUCR;
+    uint8_t temp = MCUCR;
     MCUCR = temp | (1<<IVCE);
     MCUCR = temp | (1<<IVSEL);	
 	
-	
+	UART0_SendString("Bootloader started...\n");
 	sei();
 	
     while(1) {
-        
-		
-		flag=1;
+        UART0_SendString("bl_running\n");
+
+		for(uint32_t i=0; i<((F_CPU/10)*2); i++) {
+			asm volatile ("nop");
+		}
 		
     }
 }

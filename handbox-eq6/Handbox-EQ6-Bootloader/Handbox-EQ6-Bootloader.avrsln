@@ -5,12 +5,18 @@ Project("{D1100916-62DA-4D80-A9B4-55A1E7CCEEB3}") = "Handbox-EQ6-Bootloader", "H
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug (+Flash)|AVR = Debug (+Flash)|AVR
 		Debug|AVR = Debug|AVR
+		Release (+Flash)|AVR = Release (+Flash)|AVR
 		Release|AVR = Release|AVR
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{712E0844-65E6-4A16-AF69-E3FBF53D1762}.Debug (+Flash)|AVR.ActiveCfg = Debug (+Flash)|AVR
+		{712E0844-65E6-4A16-AF69-E3FBF53D1762}.Debug (+Flash)|AVR.Build.0 = Debug (+Flash)|AVR
 		{712E0844-65E6-4A16-AF69-E3FBF53D1762}.Debug|AVR.ActiveCfg = Debug|AVR
 		{712E0844-65E6-4A16-AF69-E3FBF53D1762}.Debug|AVR.Build.0 = Debug|AVR
+		{712E0844-65E6-4A16-AF69-E3FBF53D1762}.Release (+Flash)|AVR.ActiveCfg = Release (+Flash)|AVR
+		{712E0844-65E6-4A16-AF69-E3FBF53D1762}.Release (+Flash)|AVR.Build.0 = Release (+Flash)|AVR
 		{712E0844-65E6-4A16-AF69-E3FBF53D1762}.Release|AVR.ActiveCfg = Release|AVR
 		{712E0844-65E6-4A16-AF69-E3FBF53D1762}.Release|AVR.Build.0 = Release|AVR
 	EndGlobalSection

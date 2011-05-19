@@ -5,11 +5,13 @@
  *  Author: Huebener.Se
  */ 
 
+#ifndef NOSTDOUT
 #include <stdio.h>
 #include <stdlib.h>
+#endif
+
 #include <avr/io.h>
 #include <avr/interrupt.h> 
-#include <util/atomic.h>
 
 #include "myuart.h"
 
@@ -26,8 +28,10 @@ volatile struct {
 	uint8_t write;
 } UART_TXBuffer = {{}, 0, 0};
 
+#ifndef NOSTDOUT
 //stdout handler for printf...
 volatile FILE UART0_STDOutHandler = FDEV_SETUP_STREAM(UART0_SendCharSTDOUT, NULL, _FDEV_SETUP_WRITE );	
+#endif
 	
 
  void UART0_Init(void) {
@@ -66,11 +70,12 @@ volatile FILE UART0_STDOutHandler = FDEV_SETUP_STREAM(UART0_SendCharSTDOUT, NULL
 	return;
 }
 
-
+#ifndef NOSTDOUT
 int UART0_SendCharSTDOUT(char sendchar, FILE *stream) {	
 	UART0_SendChar(sendchar);	 
 	return 0;
 }
+#endif
 
 void UART0_SendChar(char sendchar) {
 	
@@ -85,6 +90,13 @@ void UART0_SendChar(char sendchar) {
 	UCSR0B |= (1 << UDRIE0); //USART Data Register Empty Interrupt Enable	
 	 
 	return;
+}
+
+void UART0_SendString(char *string) {
+    while (*string) {   /* so lange *s != '\0' also ungleich dem "String-Endezeichen" */
+        UART0_SendChar(*string);
+        string++;
+    }	
 }
 
 
