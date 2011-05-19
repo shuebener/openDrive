@@ -24,8 +24,11 @@
 
 void UART0_Init(void);
 void UART0_SendChar(char sendchar);
+void UART0_SendString(char *string);
+
+#ifndef NOSTDOUT
 int UART0_SendCharSTDOUT(char sendchar, FILE *stream);
-//void UART0_SendString(char *s);
+#endif
 
 
 

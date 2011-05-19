@@ -10,6 +10,8 @@
 #include <avr/io.h>
 #include <avr/interrupt.h> 
 
+#include <util/delay.h>
+
 #include "main.h"
 #include "myuart.h"
 
@@ -17,17 +19,14 @@ extern FILE UART0_STDOutHandler;
 
 
 int main(void) {
-	void (*bootloader)( void ) = 0x1800;
 	stdout = &UART0_STDOutHandler;
-	
 	UART0_Init();
 	
 	printf("Main program now running...\n");
 	sei(); //Enable Interrupts	
 	
-	uint8_t test=0;
     while(1) {
-        test=1;
-		bootloader();
+        printf("mp_running\n");
+		_delay_ms(2000);
     }
 }
