@@ -21,11 +21,24 @@
 #define UART_RX_BUFFER_MASK (UART_RX_BUFFER_SIZE - 1)
 #define UART_TX_BUFFER_MASK (UART_TX_BUFFER_SIZE - 1)
 
+#define UART_NO_CHAR_AVAILABLE 1
+#define UART_CHAR_AVAILABLE 0
+#define UART_RX_ERROR_NOERROR 0
+#define UART_RX_ERROR_FRAMEERROR 1
+#define UART_RX_ERROR_DATAOVERRUN 2
+#define UART_RX_ERROR_PARITYERROR 3
+#define UART_RX_ERROR_FIFOOVERRUN 4
+
 
 void UART0_Init(void);
 void UART0_SendChar(char sendchar);
+void UART0_SendString(char *string);
+uint8_t UART0_ReadChar(char *readchar);
+
+#ifndef UART_NOSTDLIB
 int UART0_SendCharSTDOUT(char sendchar, FILE *stream);
-//void UART0_SendString(char *s);
+#endif
+
 
 
 
