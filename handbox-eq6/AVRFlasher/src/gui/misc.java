@@ -1,10 +1,8 @@
 
 package gui;
 
-import java.awt.Container;
-import java.awt.Dimension;
-import java.awt.Toolkit;
-
+import java.io.*;
+import javax.swing.*;
 
 public class misc {
 
@@ -18,5 +16,34 @@ public class misc {
 		}
 		
 		return(HexStr);
+	}
+	
+	public static int getLineCnt(String File) {
+		FileReader fr;
+		BufferedReader br;
+		int rows = 0;
+	
+		try {
+			fr = new FileReader(File);			
+			br = new BufferedReader(fr);			
+			while(br.readLine() != null) {
+				rows++;
+			}
+			br.close();
+			fr.close();
+		} catch(Exception e) {
+			
+		}
+		
+		return(rows);
+	}
+	
+	public static int getCBIndexByName(JComboBox CB, String Name) {		
+		for(int i=0; i < CB.getItemCount(); i++) {
+			if(CB.getItemAt(i).equals(Name)) {
+				return(i);
+			}
+		}
+		return(-1);
 	}
 }

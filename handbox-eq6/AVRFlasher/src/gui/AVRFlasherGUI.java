@@ -9,32 +9,37 @@
  * Created on 19.05.2011, 10:19:42
  */
 package gui;
-import java.io.*;
+
 import gnu.io.*;
-import java.lang.*;
-import java.io.File;
-import javax.swing.JFileChooser;
-import javax.swing.filechooser.FileFilter;
+import java.io.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import crc.*;
+import javax.swing.*;
 import uart.*;
 import type.*;
 
-/**
- *
- * @author Huebener.Se
- */
 public class AVRFlasherGUI extends javax.swing.JFrame {
+	
+	protected boolean SenderTaskRunning = false;
+	public Settings xSettings = new Settings();
+	protected GetSysInfo gsi = new GetSysInfo();
 
 	/** Creates new form AVRFlasherGUI */
 	public AVRFlasherGUI() {
+		
+		xSettings.LoadXML();		
 		initComponents();
 		               
 		cbox_AvailablePorts.removeAllItems();
 		RS232.updateAvailablePorts();
 		for(AvailablePorts_t port : RS232.Ports) {
 			cbox_AvailablePorts.addItem(port.PortName);
-		}	                
+		}	 
+		
+		txt_selectedfile.setText(xSettings.getProperty("SelectedFile", ""));
+		cbox_AvailablePorts.setSelectedItem(xSettings.getProperty("Port", "COM1"));
+		cbox_BaudRate.setSelectedItem(xSettings.getProperty("BaudRate", "9600"));
+		
+		this.gsi.setguih(this);
 	}
 
 	/** This method is called from within the constructor to
@@ -46,43 +51,46 @@ public class AVRFlasherGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
+        txt_logbox = new javax.swing.JScrollPane();
         txt_logwindow = new javax.swing.JTextArea();
         btn_selectexfile = new javax.swing.JButton();
         txt_selectedfile = new javax.swing.JTextField();
-        btn_loadfile = new javax.swing.JButton();
         btn_ReloadPorts = new javax.swing.JButton();
         lbl_AvailablePorts = new javax.swing.JLabel();
         cbox_AvailablePorts = new javax.swing.JComboBox();
         lbl_BaudRate = new javax.swing.JLabel();
         cbox_BaudRate = new javax.swing.JComboBox();
         btn_Connect = new javax.swing.JButton();
+        btn_flash = new javax.swing.JButton();
+        btn_clearlog = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        lbl_device = new javax.swing.JLabel();
+        lbl_signature = new javax.swing.JLabel();
+        lbl_bootloader = new javax.swing.JLabel();
+        lbl_firmware = new javax.swing.JLabel();
+        txt_device = new javax.swing.JLabel();
+        txt_signature = new javax.swing.JLabel();
+        txt_bootloader = new javax.swing.JLabel();
+        txt_firmware = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("openDrive AVRFlasher");
         setName("frm_main"); // NOI18N
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         txt_logwindow.setColumns(20);
         txt_logwindow.setRows(5);
-        jScrollPane1.setViewportView(txt_logwindow);
+        txt_logbox.setViewportView(txt_logwindow);
 
         btn_selectexfile.setText("Select .hex File");
         btn_selectexfile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_selectexfileActionPerformed(evt);
-            }
-        });
-
-        txt_selectedfile.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_selectedfileActionPerformed(evt);
-            }
-        });
-
-        btn_loadfile.setText("Load");
-        btn_loadfile.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_loadfileActionPerformed(evt);
             }
         });
 
@@ -113,6 +121,40 @@ public class AVRFlasherGUI extends javax.swing.JFrame {
             }
         });
 
+        btn_flash.setText("Flash");
+        btn_flash.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_flashActionPerformed(evt);
+            }
+        });
+
+        btn_clearlog.setText("Clear Log");
+        btn_clearlog.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_clearlogActionPerformed(evt);
+            }
+        });
+
+        lbl_device.setText("Device:");
+
+        lbl_signature.setText("Signature:");
+
+        lbl_bootloader.setText("Bootloader:");
+
+        lbl_firmware.setText("Firmware:");
+
+        txt_device.setText("not connected");
+        txt_device.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        txt_signature.setText("not connected");
+        txt_signature.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        txt_bootloader.setText("not connected");
+        txt_bootloader.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        txt_firmware.setText("not connected");
+        txt_firmware.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -120,13 +162,8 @@ public class AVRFlasherGUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 559, Short.MAX_VALUE)
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 495, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(txt_selectedfile, javax.swing.GroupLayout.DEFAULT_SIZE, 448, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_selectexfile))
-                    .addComponent(btn_loadfile, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
                         .addComponent(lbl_AvailablePorts)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(cbox_AvailablePorts, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -136,14 +173,46 @@ public class AVRFlasherGUI extends javax.swing.JFrame {
                         .addComponent(lbl_BaudRate)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(cbox_BaudRate, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
-                        .addComponent(btn_Connect)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btn_Connect))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbl_device)
+                            .addComponent(lbl_signature))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txt_signature, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_device, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lbl_firmware)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txt_firmware, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lbl_bootloader)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txt_bootloader, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(jSeparator2, javax.swing.GroupLayout.DEFAULT_SIZE, 495, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(txt_selectedfile, javax.swing.GroupLayout.DEFAULT_SIZE, 384, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_selectexfile))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btn_flash)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_clearlog))
+                    .addComponent(txt_logbox, javax.swing.GroupLayout.DEFAULT_SIZE, 495, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {cbox_AvailablePorts, cbox_BaudRate});
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btn_Connect, btn_selectexfile});
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {lbl_bootloader, lbl_device, lbl_firmware, lbl_signature});
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btn_clearlog, btn_flash});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,20 +225,46 @@ public class AVRFlasherGUI extends javax.swing.JFrame {
                     .addComponent(lbl_BaudRate)
                     .addComponent(cbox_BaudRate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_Connect))
-                .addGap(21, 21, 21)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbl_device)
+                            .addComponent(txt_device))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbl_signature)
+                            .addComponent(txt_signature, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbl_bootloader)
+                            .addComponent(txt_bootloader))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbl_firmware)
+                            .addComponent(txt_firmware))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 7, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_selectedfile, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_selectexfile))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn_loadfile)
-                .addGap(7, 7, 7)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_flash)
+                    .addComponent(btn_clearlog))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txt_logbox, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btn_selectexfile, txt_selectedfile});
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btn_ReloadPorts, cbox_AvailablePorts, cbox_BaudRate, lbl_AvailablePorts});
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {lbl_bootloader, lbl_device, lbl_firmware, lbl_signature, txt_bootloader, txt_device, txt_firmware, txt_signature});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -186,48 +281,16 @@ public class AVRFlasherGUI extends javax.swing.JFrame {
 		fc.addChoosableFileFilter(new FileNameExtensionFilter("Text-Files (*.txt)", "txt"));
 		fc.addChoosableFileFilter(new FileNameExtensionFilter("Intel-Hex-Files (*.hex)", "hex"));
 
-		fc.setCurrentDirectory(new File("C:/Users/Huebener.Se/Desktop/openDrive/handbox-eq6/Bootloader-TestProgram/Debug"));		
-		
-		
+		fc.setCurrentDirectory(new File(xSettings.getProperty("CurrentDirectory", "")));		
         if (fc.showOpenDialog(AVRFlasherGUI.this) == JFileChooser.APPROVE_OPTION) {
             File file = fc.getSelectedFile();
+			
 			txt_selectedfile.setText(file.toString());
+			this.xSettings.setProperty("CurrentDirectory", fc.getCurrentDirectory().toString());
         }
 		
 		return;
 	}//GEN-LAST:event_btn_selectexfileActionPerformed
-
-	private void txt_selectedfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_selectedfileActionPerformed
-		// TODO add your handling code here:
-	}//GEN-LAST:event_txt_selectedfileActionPerformed
-
-	private void btn_loadfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_loadfileActionPerformed
-
-								
-		try {
-			FileReader fr = new FileReader(txt_selectedfile.getText());
-			BufferedReader br = new BufferedReader(fr);
-			CRC16 c = new CRC16();
-			txt_logwindow.setText("");
-
-			while(true) {
-				String line = br.readLine();
-				if(line == null) {break;}
-				
-				
-				c.reset();
-				c.calc_crc16(line);
-                                
-				txt_logwindow.setText(txt_logwindow.getText() + line +" -> 0x"+ misc.Int2HexString(c.value) +"\n");
-				System.out.println(line +" -> 0x"+ misc.Int2HexString(c.value));				
-			}
-			br.close();
-			
-
-
-		} catch(Exception e) {}				
-		
-	}//GEN-LAST:event_btn_loadfileActionPerformed
 
 	private void btn_ReloadPortsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ReloadPortsActionPerformed
 		
@@ -255,12 +318,87 @@ public class AVRFlasherGUI extends javax.swing.JFrame {
 			if(RS232.Connect(sPortName)) {
 				btn_Connect.setText("Disconnect");
 			}
+			this.add2Lognl("Connected to "+ sPortName +".");
+			gsi.load();
 		} else {
 			//Connected -> disconnect!
 			RS232.CloseConnection(sPortName);
 			btn_Connect.setText("Connect");
+			this.add2Lognl("Connection to "+ sPortName +" closed.");
 		}
 	}//GEN-LAST:event_btn_ConnectActionPerformed
+
+	public void add2Lognl(String newline) {
+		add2Log(newline +"\n");
+	}
+	
+	public void add2Log(String newline) {
+		txt_logwindow.setText(txt_logwindow.getText() + newline);
+		this.repaint();
+		txt_logwindow.setCaretPosition(txt_logwindow.getText().length());
+	}
+		
+	
+	public void clearLog() {
+		txt_logwindow.setText("");
+		this.repaint();
+	}
+	
+	public String getSelectedPortName() {
+		return(cbox_AvailablePorts.getSelectedItem().toString());
+	}
+	
+	public int getSelectedBaudRate() {
+		return(Integer.valueOf(cbox_BaudRate.getSelectedItem().toString()));
+	}
+	
+	public String getSelectedFileName() {
+		return(txt_selectedfile.getText().toString());
+	}
+
+	public void setTestBtnEnabled(boolean state) {
+		btn_flash.setEnabled(state);
+		return;
+	}	
+	
+	public void showErrorMsg(String msg) {
+		JOptionPane.showMessageDialog(this, msg,"Error",JOptionPane.ERROR_MESSAGE);
+		return;
+	}
+	
+	private void btn_flashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_flashActionPerformed
+		String sPortName = this.getSelectedPortName();
+	
+		if(!RS232.isConnected(sPortName)) {
+			showErrorMsg("Com-Port not connected!");
+			return;
+		}
+		
+		if(this.getSelectedFileName().equals("")) {
+			showErrorMsg("No hex-File selected!");
+			return;
+		}
+				
+		if(btn_flash.isEnabled()) {
+			this.setTestBtnEnabled(false);
+			RS232.startSenderTaskThread(sPortName, this);
+			this.SenderTaskRunning = true;
+		}
+		
+		return;
+	}//GEN-LAST:event_btn_flashActionPerformed
+
+	private void btn_clearlogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_clearlogActionPerformed
+		this.clearLog();
+	}//GEN-LAST:event_btn_clearlogActionPerformed
+
+	private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+		this.xSettings.setProperty("SelectedFile", txt_selectedfile.getText().toString());
+		this.xSettings.setProperty("Port", cbox_AvailablePorts.getSelectedItem().toString());
+		this.xSettings.setProperty("BaudRate", cbox_BaudRate.getSelectedItem().toString());
+		
+		this.xSettings.SaveXML();
+	}//GEN-LAST:event_formWindowClosing
 
 	/**
 	 * @param args the command line arguments
@@ -268,7 +406,7 @@ public class AVRFlasherGUI extends javax.swing.JFrame {
 	public static void main(String args[]) {
 		java.awt.EventQueue.invokeLater(new Runnable() {
 
-			public void run() {
+			@Override public void run() {
 				new AVRFlasherGUI().setVisible(true);
 			}
 		});
@@ -276,16 +414,27 @@ public class AVRFlasherGUI extends javax.swing.JFrame {
 
 	
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_Connect;
+    public javax.swing.JButton btn_Connect;
     private javax.swing.JButton btn_ReloadPorts;
-    private javax.swing.JButton btn_loadfile;
+    private javax.swing.JButton btn_clearlog;
+    private javax.swing.JButton btn_flash;
     private javax.swing.JButton btn_selectexfile;
     private javax.swing.JComboBox cbox_AvailablePorts;
     private javax.swing.JComboBox cbox_BaudRate;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel lbl_AvailablePorts;
     private javax.swing.JLabel lbl_BaudRate;
+    private javax.swing.JLabel lbl_bootloader;
+    private javax.swing.JLabel lbl_device;
+    private javax.swing.JLabel lbl_firmware;
+    private javax.swing.JLabel lbl_signature;
+    private javax.swing.JLabel txt_bootloader;
+    private javax.swing.JLabel txt_device;
+    private javax.swing.JLabel txt_firmware;
+    private javax.swing.JScrollPane txt_logbox;
     private javax.swing.JTextArea txt_logwindow;
     private javax.swing.JTextField txt_selectedfile;
+    private javax.swing.JLabel txt_signature;
     // End of variables declaration//GEN-END:variables
 }

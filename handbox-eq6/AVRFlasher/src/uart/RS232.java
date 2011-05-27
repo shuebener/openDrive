@@ -7,11 +7,13 @@ import java.util.Enumeration;
 import java.util.ArrayList;
 import java.util.concurrent.Semaphore;
 import type.AvailablePorts_t;
+import gui.*;
 
 
 public class RS232 {
 	
 	public static ArrayList<AvailablePorts_t> Ports = new ArrayList<AvailablePorts_t>();
+	public static Semaphore semaphore = new Semaphore(1, true);
 	
 	public static void updateAvailablePorts() {
 		Enumeration AvailablePorts;
@@ -64,6 +66,7 @@ public class RS232 {
 			return(false);
 		}
 		
+/*                
 		try {
 			SerialListener sl = new SerialListener();
 			sl.setPortNr(PortNr);
@@ -73,8 +76,7 @@ public class RS232 {
 			System.out.println("Error: "+ e);
 			return(false);
 		}
-		
-
+*/	
 
 		try {
 			Ports.get(PortNr).sp.setSerialPortParams(Ports.get(PortNr).baudrate, Ports.get(PortNr).dataBits, Ports.get(PortNr).stopBits, Ports.get(PortNr).parity);
@@ -119,6 +121,35 @@ public class RS232 {
 		return(true);
 	}
 	
+	public static void startSenderTaskThread(String PortName, AVRFlasherGUI gui) {
+		int PortNr = RS232._getPortByName(PortName);
+		if(PortNr == -1) {
+			System.out.println("Port not found!");
+			return;
+		}		
+				
+		if(Ports.get(PortNr).SenderTaskThread == null) {
+			Ports.get(PortNr).SenderTaskThread = new SenderTask(PortNr, gui);			
+		}				
+	}
+	
+	public static void stopSenderTaskThread(int PortNr) {
+		if(Ports.get(PortNr).SenderTaskThread != null) {
+			Ports.get(PortNr).SenderTaskThread.stop();
+			Ports.get(PortNr).SenderTaskThread = null;
+		}		
+	}
+	
+	public static void stopSenderTaskThread(String PortName) {
+		int PortNr = RS232._getPortByName(PortName);
+		if(PortNr == -1) {
+			System.out.println("Port not found!");
+			return;
+		}			
+		
+		stopSenderTaskThread(PortNr);
+	}	
+	
 	public static void setSettings(String PortName, int BaudRate, int DataBits, int StopBits, int Parity) {
 		
 		int PortNr = RS232._getPortByName(PortName);
@@ -150,15 +181,9 @@ public class RS232 {
 		}
 	}
 	
-	public static void SendString(String PortName, String Message) {
-		int PortNr = RS232._getPortByName(PortName);
-		if(PortNr == -1) {
-			System.out.println("Port not found!");
-			return;
-		}
-		
+	public static void SendString(int PortNr, String Message) {
 		if(!Ports.get(PortNr).PortOpen) {
-			System.out.println(PortName +" not open...");
+			System.out.println("Com-Port not open...");
 		}
 		try{
 			Ports.get(PortNr).os.write(Message.getBytes());
@@ -166,12 +191,24 @@ public class RS232 {
 		} catch(Exception e) {
 			System.out.println("Error: "+ e);
 			return;			
+		}		
+	}
+	
+	public static void SendString(String PortName, String Message) {
+		int PortNr = RS232._getPortByName(PortName);
+		if(PortNr == -1) {
+			System.out.println("Port not found!");
+			return;
 		}
+		
+		SendString(PortNr, Message);
 	}
 	
 	public static void receiveData(int PortNr) {
 		//DATA_AVAILABLE EventHandler...
 
+		if(!Ports.get(PortNr).PortOpen) {return;}
+		
 		try {
 			byte[] data = new byte[150];
 			int num;
@@ -184,6 +221,31 @@ public class RS232 {
 			System.out.println("Error: "+ e);
 		}		
 	}	
+	
+	public static String getReceivedData(String PortName) {
+		return( getReceivedData(_getPortByName(PortName)) );
+	}	
+	
+	public static String getReceivedData(int PortNr) {
+		if(!Ports.get(PortNr).PortOpen) {return("");}
+		String receive;
+		try {
+			byte[] data = new byte[150];
+			int num;
+			while(Ports.get(PortNr).is.available() > 0) {
+				num = Ports.get(PortNr).is.read(data, 0, data.length);
+				receive = new String(data, 0, num);
+				//System.out.println("Empfange: "+ receive);
+				Ports.get(PortNr).test = true;
+				return(receive);
+			}
+		} catch (Exception e) {
+			System.out.println("Error: "+ e);
+			return("");
+		}		
+		
+		return("");
+	}
 	
 	protected static int _getPortByName(String PortName) {
 		

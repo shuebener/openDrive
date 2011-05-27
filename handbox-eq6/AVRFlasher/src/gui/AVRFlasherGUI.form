@@ -9,6 +9,9 @@
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
   </SyntheticProperties>
+  <Events>
+    <EventHandler event="windowClosing" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="formWindowClosing"/>
+  </Events>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -27,14 +30,8 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane1" pref="559" max="32767" attributes="0"/>
+                  <Component id="jSeparator1" alignment="0" pref="495" max="32767" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="txt_selectedfile" pref="448" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btn_selectexfile" linkSize="4" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="btn_loadfile" alignment="0" min="-2" pref="66" max="-2" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
                       <Component id="lbl_AvailablePorts" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="cbox_AvailablePorts" linkSize="3" min="-2" pref="106" max="-2" attributes="0"/>
@@ -44,9 +41,45 @@
                       <Component id="lbl_BaudRate" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="cbox_BaudRate" linkSize="3" min="-2" pref="72" max="-2" attributes="0"/>
-                      <EmptySpace pref="70" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="btn_Connect" linkSize="4" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lbl_device" linkSize="5" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_signature" linkSize="5" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="txt_signature" min="-2" pref="172" max="-2" attributes="0"/>
+                          <Component id="txt_device" alignment="0" min="-2" pref="172" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="23" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="lbl_firmware" linkSize="5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="txt_firmware" min="-2" pref="172" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="lbl_bootloader" linkSize="5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="txt_bootloader" min="-2" pref="172" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Component id="jSeparator2" alignment="0" pref="495" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="txt_selectedfile" pref="384" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btn_selectexfile" linkSize="4" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="btn_flash" linkSize="7" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btn_clearlog" linkSize="7" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="txt_logbox" alignment="0" pref="495" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -64,22 +97,54 @@
                   <Component id="cbox_BaudRate" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btn_Connect" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jSeparator1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lbl_device" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_device" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lbl_signature" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_signature" linkSize="6" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lbl_bootloader" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_bootloader" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lbl_firmware" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_firmware" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jSeparator2" min="-2" pref="7" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txt_selectedfile" linkSize="1" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
                   <Component id="btn_selectexfile" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="btn_loadfile" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-              <Component id="jScrollPane1" pref="243" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btn_flash" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btn_clearlog" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace max="-2" attributes="0"/>
+              <Component id="txt_logbox" min="-2" pref="140" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+    <Container class="javax.swing.JScrollPane" name="txt_logbox">
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
       </AuxValues>
@@ -103,17 +168,6 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txt_selectedfile">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_selectedfileActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="btn_loadfile">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Load"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_loadfileActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btn_ReloadPorts">
       <Properties>
@@ -178,6 +232,89 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_ConnectActionPerformed"/>
       </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn_flash">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Flash"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_flashActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn_clearlog">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Clear Log"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_clearlogActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JSeparator" name="jSeparator1">
+    </Component>
+    <Component class="javax.swing.JSeparator" name="jSeparator2">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbl_device">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Device:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbl_signature">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Signature:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbl_bootloader">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Bootloader:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbl_firmware">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Firmware:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="txt_device">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="not connected"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="txt_signature">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="not connected"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="txt_bootloader">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="not connected"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="txt_firmware">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="not connected"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
+        </Property>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

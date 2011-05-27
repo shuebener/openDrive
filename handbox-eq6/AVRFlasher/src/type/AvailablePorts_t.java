@@ -13,6 +13,7 @@ import gnu.io.*; // RXTX
 import java.io.*;
 import java.util.Enumeration;
 import java.util.ArrayList;
+import uart.*;
 //import java.util.concurrent.Semaphore;
 
 public class AvailablePorts_t {
@@ -27,6 +28,7 @@ public class AvailablePorts_t {
 	public InputStream is;
 	public boolean PortOpen;
 	public boolean test;
+	public SenderTask SenderTaskThread = null;
 	//public final Semaphore data_available = new Semaphore(1, true);
 	
 	public AvailablePorts_t(CommPortIdentifier spid, String spn) {
